@@ -258,6 +258,10 @@ on boot
     chown radio radio /sys/class/power_supply/battery/network_search
     chown system system /sys/class/power_supply/battery/navigation
 
+    # Flash storage isn't a good entropy source, and only causes locking
+    # overhead in the kernel. Turn it off.
+    write /sys/block/mmcblk0/queue/add_random 0
+
 on post-fs-data
     mkdir /data/media 0770 media_rw media_rw
 
