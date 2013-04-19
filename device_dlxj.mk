@@ -117,6 +117,9 @@ PRODUCT_PACKAGES += \
         libgps.utils \
         gps.msm8960
 
+PRODUCT_COPY_FILES += \
+	device/htc/dlxj/prebuilt/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so
+
 # NFC
 PRODUCT_PACKAGES += \
     libnfc \
