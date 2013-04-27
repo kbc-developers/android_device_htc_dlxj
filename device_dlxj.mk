@@ -25,7 +25,6 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/dlxj/overlay
 # Ramdisk
 PRODUCT_COPY_FILES += \
     device/htc/dlxj/ramdisk/fstab.dlxj:root/fstab.dlxj \
-    device/htc/dlxj/ramdisk/init.rc:root/init.rc \
     device/htc/dlxj/ramdisk/init.dlxj.rc:root/init.dlxj.rc \
     device/htc/dlxj/ramdisk/ueventd.dlxj.rc:root/ueventd.dlxj.rc \
     device/htc/dlxj/ramdisk/init.dlxj.usb.rc:root/init.dlxj.usb.rc \
