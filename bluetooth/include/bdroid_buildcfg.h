@@ -1,4 +1,4 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
-#define BTM_DEF_LOCAL_NAME "HTC Droid DNA"
+#define BTM_DEF_LOCAL_NAME "HTC J butterfly"
 #endif
