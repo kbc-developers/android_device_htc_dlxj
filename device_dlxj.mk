@@ -105,9 +105,6 @@ PRODUCT_COPY_FILES += \
     device/htc/dlxj/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     device/htc/dlxj/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
-PRODUCT_COPY_FILES += \
-    device/htc/dlxj/init.dlxj.bt.sh:system/etc/init.dlxj.bt.sh
-	
 # GPS
 PRODUCT_PACKAGES += \
         libloc_adapter \
