@@ -221,7 +221,7 @@ on boot
     	chown system system /sys/class/leds/amber/off_timer
     	chown system system /sys/class/leds/button-backlight/brightness
     	chown system system /sys/class/leds/lcd-backlight/brightness  
-    	
+
     	# create symlink to qcn wpa_supplicant folder
     	symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
     	symlink /dev/socket/wpa_wlan0 /data/system/wpa_supplicant/wlan0
@@ -269,7 +269,7 @@ on boot
 
     	# flashlight
     	chown system camera /sys/class/leds/flashlight/brightness
-   	 chmod 0666          /sys/class/leds/flashlight/brightness
+	chmod 0666          /sys/class/leds/flashlight/brightness
 
 	# HTC SSD USB
     	chown system system /sys/class/android_usb/f_modem/on
@@ -319,6 +319,16 @@ on boot
     chmod 555 /data/DxDrm
     mkdir /sdcard/download
     # Discretix DRM change end
+
+    # enable sleep_clk2 on DLXj XA board only
+on property:ro.devicerev=0 
+    mount -t debugfs none /sys/kernel/debug
+    write /sys/kernel/debug/pm8921-dbg/addr 0x10d
+    write /sys/kernel/debug/pm8921-dbg/data 0x08
+    write /sys/kernel/debug/pm8921-dbg/addr 0x10c
+    write /sys/kernel/debug/pm8921-dbg/data 0x10
+    write /sys/kernel/debug/pm8921-dbg/addr 0x10b
+    write /sys/kernel/debug/pm8921-dbg/data 0x22
 
 service thermald /system/bin/thermald
 	class core
