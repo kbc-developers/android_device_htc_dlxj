@@ -220,7 +220,8 @@ on boot
    	chown system system /sys/class/leds/amber/blink
     	chown system system /sys/class/leds/amber/off_timer
     	chown system system /sys/class/leds/button-backlight/brightness
-    	chown system system /sys/class/leds/lcd-backlight/brightness  
+    	chown system system /sys/class/leds/lcd-backlight/brightness
+	chown system system /sys/class/leds/indicator/ModeRGB
 
     	# create symlink to qcn wpa_supplicant folder
     	symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
