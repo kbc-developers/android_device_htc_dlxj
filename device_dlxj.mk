@@ -49,8 +49,11 @@ endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
-# HTC BT audio config
-PRODUCT_COPY_FILES += device/htc/dlxj/configs/AudioBTID.csv:system/etc/AudioBTID.csv
+# Media configs
+PRODUCT_COPY_FILES += device/htc/dlx/configs/AudioBTID.csv:system/etc/AudioBTID.csv \
+    device/htc/dlx/configs/audio_policy.conf:system/etc/audio_policy.conf \
+    device/htc/dlx/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    device/htc/dlx/configs/media_codecs.xml:system/etc/media_codecs.xml
 
 # vold config
 PRODUCT_COPY_FILES += \
