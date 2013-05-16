@@ -40,6 +40,7 @@
 /dev/ttyHS0               0660   bluetooth  bluetooth
 /dev/ttyGS0               0660   system     system
 /dev/uinput               0660   system     bluetooth
+/dev/uhid                 0660   system     bluetooth
 /dev/alarm                0664   system     radio
 /dev/tty0                 0660   root       system
 /dev/sdio_tty_ciq_00      0660   system     system
