@@ -1,0 +1,26 @@
+[
+  {
+    "project": "tako0910",
+    "repository": "android_device_htc_dlxj",
+    "target_path": "device/htc/dlxj",
+    "branch": "jb-mr1"
+  },
+  {
+    "project": "tako0910",
+    "repository": "android_device_htc_apq8064-common",
+    "target_path": "device/htc/apq8064-common",
+    "branch": "jb-mr1"
+  },
+  {
+    "project": "tako0910",
+    "repository": "android_vendor_htc_dlxj",
+    "target_path": "vendor/htc/dlxj",
+    "branch": "jb-mr1"
+  },
+  {
+    "project": "tako0910",
+    "repository": "android_kernel_htc_dlxj",
+    "target_path": "kernel/htc/dlxj-3.4",
+    "branch": "jb-mr1"
+  }
+]
