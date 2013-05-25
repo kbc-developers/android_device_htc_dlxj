@@ -17,8 +17,8 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# common apq8064 configs
-$(call inherit-product, device/htc/apq8064-common/apq8064.mk)
+# common msm8960 configs
+$(call inherit-product, device/htc/msm8960-common/msm8960.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/dlxj/overlay
 
@@ -50,10 +50,7 @@ PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 # Media configs
-PRODUCT_COPY_FILES += device/htc/dlxj/configs/AudioBTID.csv:system/etc/AudioBTID.csv \
-    device/htc/dlxj/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    device/htc/dlxj/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    device/htc/dlxj/configs/media_codecs.xml:system/etc/media_codecs.xml
+PRODUCT_COPY_FILES += device/htc/dlxj/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
 # vold config
 PRODUCT_COPY_FILES += \
@@ -103,6 +100,10 @@ PRODUCT_COPY_FILES += \
     device/htc/dlxj/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
     device/htc/dlxj/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     device/htc/dlxj/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
+
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8960
 
 # GPS
 PRODUCT_PACKAGES += \
