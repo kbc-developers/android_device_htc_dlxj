@@ -302,15 +302,15 @@ on property:ro.devicerev=0
     write /sys/kernel/debug/pm8921-dbg/addr 0x10b
     write /sys/kernel/debug/pm8921-dbg/data 0x22
 
-#service thermald /system/bin/thermald
-#	class core
-#	user root
-#	group root
+service thermald /system/bin/thermald
+	class core
+	user root
+	group root
 
-#service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
-#	class core
-#	user root
-#	disabled
+service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
+	class core
+	user root
+	disabled
 
 #service adaptive /system/bin/adaptive -c 0 -s 150 -b 210
 #    class core
@@ -500,6 +500,7 @@ service ril-daemon /system/bin/rild
     group radio cache inet misc audio media_rw sdcard_rw qcom_oncrpc diag qcom_diag
 
 on property:dev.bootcomplete=1
+    start mpdecision
     start bootcomplete
 
 service bootcomplete /system/bin/bootcomplete
