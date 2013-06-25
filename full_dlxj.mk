@@ -20,19 +20,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # common msm8960 configs
 $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/htc/dlxj/overlay
+# Inherit from dlx device
+$(call inherit-product, device/htc/dlx/device.mk)
 
 # The gps config appropriate for this device
 PRODUCT_COPY_FILES += device/common/gps/gps.conf_US_SUPL:system/etc/gps.conf
 
 # Ramdisk
-PRODUCT_COPY_FILES += \
-    device/htc/dlxj/ramdisk/fstab.dlxj:root/fstab.dlxj \
-    device/htc/dlxj/ramdisk/init.dlxj.rc:root/init.dlxj.rc \
-    device/htc/dlxj/ramdisk/ueventd.dlxj.rc:root/ueventd.dlxj.rc \
-    device/htc/dlxj/ramdisk/init.dlxj.usb.rc:root/init.dlxj.usb.rc \
-    device/htc/dlxj/ramdisk/init.qcom.sh:root/init.qcom.sh \
-    device/htc/dlxj/ramdisk/init.qcom.firmware_links.sh:root/init.qcom.firmware_links.sh
+PRODUCT_PACKAGES += \
+    fstab.dlxj \
+    init.qcom.firmware_links.sh \
+    init.qcom.sh \
+    init.dlxj.rc \
+    init.dlxj.usb.rc \
+    ueventd.dlxj.rc
+
+PRODUCT_PACKAGES += \
+    libnetcmdiface
 
 # Custom Recovery and Charging
 PRODUCT_COPY_FILES += \
@@ -54,6 +58,8 @@ PRODUCT_COPY_FILES += \
 
 # Media configs
 PRODUCT_COPY_FILES += device/htc/dlxj/configs/AudioBTID.csv:system/etc/AudioBTID.csv
+PRODUCT_COPY_FILES += device/htc/dlxj/configs/AudioBTIDnew.csv:system/etc/AudioBTIDnew.csv
+PRODUCT_COPY_FILES += device/htc/dlxj/configs/audio_effects.conf:system/etc/audio_effects.conf
 
 # vold config
 PRODUCT_COPY_FILES += \
@@ -120,9 +126,6 @@ PRODUCT_PACKAGES += \
         libgps.utils \
         gps.msm8960
 
-PRODUCT_COPY_FILES += \
-	device/htc/dlxj/prebuilt/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so
-
 # NFC
 PRODUCT_PACKAGES += \
     nfc.msm8960 \
@@ -185,9 +188,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi xxhdpi
 PRODUCT_LOCALES += en_US
-
-# call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/dlxj/dlxj-vendor.mk)
 
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)

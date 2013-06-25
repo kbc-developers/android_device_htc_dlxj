@@ -1,1 +1,1 @@
-add_lunch_combo full_dlxj-userdebug
+add_lunch_combo cm_dlxj-userdebug
