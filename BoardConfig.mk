@@ -53,9 +53,8 @@ BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlxj user_debug=0 
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01400000
-TARGET_KERNEL_VERSION := 3.4
-TARGET_KERNEL_CONFIG := deluxe_j_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/dlxj-$(TARGET_KERNEL_VERSION)
+TARGET_KERNEL_CONFIG := cyanogenmod_dlxj_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/dlxj
 
 # Audio
 BOARD_USES_FLUENCE_INCALL := true
