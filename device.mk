@@ -15,7 +15,7 @@
 #
 
 ## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/htc/dlx/dlxj-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/dlxj/dlxj-vendor.mk)
 
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/htc/dlxj/overlay
