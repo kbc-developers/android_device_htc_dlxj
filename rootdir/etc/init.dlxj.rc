@@ -136,6 +136,9 @@ on boot
 
     start qcamerasvr
 
+    # 4.3 requires this
+    chmod 0644 /proc/cmdline
+
     # bluetooth
     chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
