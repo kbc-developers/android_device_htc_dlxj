@@ -172,7 +172,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cdma.home.operator.alpha = Verizon \
     ro.cdma.home.operator.numeric = 310012 \
     ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000 \
-    ro.ril.set.mtusize=1428
+    ro.ril.set.mtusize=1428 \
+    persist.radio.snapshot_enabled=1 \
+    persist.radio.snapshot_timer=22 \
+    ro.config.multimode_cdma=1 \
+    ro.config.combined_signal=true \
+    ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000 \
+    ro.opengles.version=196608 \
+    persist.eons.enabled=false
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
