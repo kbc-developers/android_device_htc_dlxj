@@ -38,11 +38,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnetcmdiface
 
-# Custom Recovery and Charging
-PRODUCT_COPY_FILES += \
-    device/htc/dlxj/recovery/sbin/choice_fn:recovery/root/sbin/choice_fn \
-    device/htc/dlxj/recovery/sbin/detect_key:recovery/root/sbin/detect_key \
-    device/htc/dlxj/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.dlxj.rc \
+    choice_fn \
+    detect_key \
+    offmode_charging \
+    power_test
 
 # Get the sample verizon list of APNs
 PRODUCT_COPY_FILES += device/sample/etc/apns-conf_verizon.xml:system/etc/apns-conf.xml
