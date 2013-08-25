@@ -118,7 +118,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Added for Clockworkmod
-BOARD_CUSTOM_GRAPHICS := ../../../device/htc/dlx/recovery/graphics.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/htc/dlxj/recovery/graphics.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HAS_NO_SELECT_BUTTON := true
