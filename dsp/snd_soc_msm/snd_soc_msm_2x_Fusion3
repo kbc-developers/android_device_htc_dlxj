@@ -1102,7 +1102,6 @@ SectionDevice
 		'LINEOUT2 Volume':1:66
 		'LINEOUT3 Volume':1:66
 		'LINEOUT4 Volume':1:66
-		'RCV AMP EN Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -1171,7 +1170,6 @@ SectionDevice
 		'LINEOUT2 Volume':1:66
 		'LINEOUT3 Volume':1:66
 		'LINEOUT4 Volume':1:66
-		'RCV AMP EN Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -1215,7 +1213,6 @@ SectionDevice
 		'LINEOUT2 Volume':1:66
 		'LINEOUT3 Volume':1:66
 		'LINEOUT4 Volume':1:66
-		'RCV AMP EN Switch':1:1
 	EndSequence
 
 	DisableSequence
