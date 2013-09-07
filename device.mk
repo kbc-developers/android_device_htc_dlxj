@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/htc/dlxj/dlxj-vendor.mk)
+## Get non-open-source specific aspects
+$(call inherit-product, vendor/htc/dlxj/dlxj-vendor.mk)
 
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += device/htc/dlxj/overlay
