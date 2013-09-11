@@ -1656,6 +1656,7 @@ SectionDevice
 	Name "Voice Recognition"
 
 	EnableSequence
+		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC8
 		'DEC8 MUX':0:DMIC2
 		'DEC8 Volume':2:68
