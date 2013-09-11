@@ -1784,28 +1784,6 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Voice Recognition"
-
-	EnableSequence
-		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC9
-		'DEC9 MUX':0:DMIC4
-		'DEC9 Volume':2:5C
-		'MICBIAS3 CAPLESS Switch':1:0
-	EndSequence
-
-	DisableSequence
-		'SLIM TX7 MUX':0:ZERO
-		'DEC9 MUX':0:ZERO
-		'DEC9 Volume':2:0
-		'MICBIAS3 CAPLESS Switch':1:0
-	EndSequence
-
-	ACDBID  11:2
-#	ACDBID  62:2
-EndSection
-
-SectionDevice
 	Name "TTY Handset Analog Tx"
 
 	EnableSequence
