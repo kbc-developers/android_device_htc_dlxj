@@ -121,6 +121,10 @@ PRODUCT_COPY_FILES += \
     device/htc/dlxj/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     device/htc/dlxj/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
+# Audio
+PRODUCT_PACKAGES += \
+	libaudioamp
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8960

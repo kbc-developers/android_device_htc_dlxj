@@ -202,6 +202,11 @@
 # dlx NFC
 /dev/pn544                0600  nfc          nfc
 
+# Audio
+/dev/rt5501               0666  system       audio
+/dev/tfa9887              0666  system       audio
+/dev/tfa9887l             0666  system       audio
+
 # USB peripheral
 /dev/bus/usb/*            0660  root         usb
 /dev/mtp_usb              0660  root         mtp
