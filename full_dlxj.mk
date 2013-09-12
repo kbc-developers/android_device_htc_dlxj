@@ -90,6 +90,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/dlxj/dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3:/system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
+
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
     device/htc/dlxj/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
