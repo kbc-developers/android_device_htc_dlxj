@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=htc
-DEVICE=dlx
+DEVICE=dlxj
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*

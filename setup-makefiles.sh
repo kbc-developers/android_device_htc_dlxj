@@ -1,6 +1,6 @@
 #!/bin/sh
 VENDOR=htc
-DEVICE=dlx
+DEVICE=dlxj
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
