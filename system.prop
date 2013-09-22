@@ -32,6 +32,9 @@ ro.telephony.ril.v3=forceCdmaLteNetworkType
 # Device needs to get CDMA subscription when RUIM is ready
 ro.cdma.subscribe_on_ruim_ready = true
 
+# For GPS privacy lock
+ro.gps.set_privacy=1
+
 # system props for display
 ro.sf.lcd_density=480
 

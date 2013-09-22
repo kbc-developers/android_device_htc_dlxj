@@ -24,7 +24,7 @@ $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
 $(call inherit-product, device/htc/dlxj/device.mk)
 
 # The gps config appropriate for this device
-PRODUCT_COPY_FILES += device/common/gps/gps.conf_US_SUPL:system/etc/gps.conf
+PRODUCT_COPY_FILES += device/htc/dlxj/gps/gps.conf:system/etc/gps.conf
 
 # Ramdisk
 PRODUCT_PACKAGES += \
