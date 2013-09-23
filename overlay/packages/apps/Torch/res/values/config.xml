@@ -20,31 +20,6 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
-    <!-- If there is no sysfs-based control mechanism, enable this -->
-    <add-resource type="bool" name="useCameraInterface">
-      <bool name="useCameraInterface">false</bool>
-    </add-resource>
-
-    <!-- Full path to the sysfs toggle -->
-    <add-resource type="string" name="flashDevice">
-      <string name="flashDevice">/sys/class/leds/flashlight/brightness</string>
-    </add-resource>
-    <!-- Full path to the sysfs luminosity -->
-    <add-resource type="string" name="flashDeviceLuminosity">
-      <string name="flashDeviceLuminosity"></string>
-    </add-resource>
-
-    <!-- Off setting -->
-    <add-resource type="integer" name="valueOff">
-      <integer name="valueOff">0</integer>
-    </add-resource>
-    <!-- On setting -->
-    <add-resource type="integer" name="valueOn">
-      <integer name="valueOn">1</integer>
-    </add-resource>
-
     <!-- Highest setting, leave -1 if it doesn't exist -->
-    <add-resource type="integer" name="valueDeathRay">
-      <integer name="valueDeathRay">-1</integer>
-    </add-resource>
+    <integer name="valueDeathRay">-1</integer>
 </resources>
