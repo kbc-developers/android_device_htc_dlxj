@@ -70,11 +70,15 @@ on fs
    mount vfat /dev/block/mmcblk0p16 /firmware/mdm wait ro shortname=lower
    exec /system/bin/sh /init.qcom.firmware_links.sh /firmware/mdm/image /vendor/firmware "*.mbn *.img"
 
-   mkdir /data/qcks 0700 root system
-   mount tmpfs tmpfs /data/qcks size=20m,mode=0750,gid=1000
+   # Create symbolic links to mount points outside of /data for qcks
+   mkdir /mnt/qcks 0700 root system
+   symlink /mnt/qcks /data/qcks
+   mount tmpfs tmpfs /mnt/qcks size=20m,mode=0750,gid=1000
 
-   mkdir /data/efs 0700 root system
-   mount tmpfs tmpfs /data/efs size=20m,mode=0750,gid=1000
+   # Create symbolic links to mount points outside of /data for efs
+   mkdir /mnt/efs 0700 root system
+   symlink /mnt/efs /data/efs
+   mount tmpfs tmpfs /mnt/efs size=20m,mode=0750,gid=1000
 
    mkdir /firmware/q6 0771 system system
    mount vfat /dev/block/mmcblk0p17 /firmware/q6 wait ro shortname=lower
