@@ -46,9 +46,6 @@ PRODUCT_PACKAGES += \
     offmode_charging \
     power_test
 
-# Get the sample verizon list of APNs
-PRODUCT_COPY_FILES += device/sample/etc/apns-conf_verizon.xml:system/etc/apns-conf.xml
-
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
     NFCEE_ACCESS_PATH := device/htc/dlxj/configs/nfcee_access.xml
