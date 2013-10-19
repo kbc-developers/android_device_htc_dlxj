@@ -142,14 +142,14 @@ PRODUCT_PACKAGES += \
 	keystore.msm8960
 
 # NFC
-PRODUCT_PACKAGES += \
-    nfc.msm8960 \
-    libnfc \
-    libnfc_ndef \
-    libnfc_jni \
-    Nfc \
-    Tag \
-    com.android.nfc_extras
+#PRODUCT_PACKAGES += \
+#    nfc.msm8960 \
+#    libnfc \
+#    libnfc_ndef \
+#    libnfc_jni \
+#    Nfc \
+#    Tag \
+#    com.android.nfc_extras
 
 # Torch
 PRODUCT_PACKAGES += \
