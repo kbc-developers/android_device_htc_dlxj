@@ -121,13 +121,13 @@ PRODUCT_COPY_FILES += \
 	device/htc/dlxj/prebuilt/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so
 
 # NFC
-PRODUCT_PACKAGES += \
-    libnfc \
-    libnfc_ndef \
-    libnfc_jni \
-    Nfc \
-    Tag \
-    com.android.nfc_extras
+#PRODUCT_PACKAGES += \
+#    libnfc \
+#    libnfc_ndef \
+#    libnfc_jni \
+#    Nfc \
+#    Tag \
+#    com.android.nfc_extras
 
 # Torch
 PRODUCT_PACKAGES += \
