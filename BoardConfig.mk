@@ -73,10 +73,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/dlxj/bluetooth/include
 BOARD_BLUEDROID_VENDOR_CONF := device/htc/dlxj/bluetooth/vnd_dlxj.txt
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 
-# Use libril in the device tree
-BOARD_PROVIDES_LIBRIL := true
-COMMON_GLOBAL_CFLAGS += -DNEW_LIBRIL_HTC
-
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
