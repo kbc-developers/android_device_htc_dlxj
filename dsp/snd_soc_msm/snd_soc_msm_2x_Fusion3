@@ -1065,8 +1065,8 @@ SectionVerb
 	DisableSequence
 		'MI2S_RX Audio Mixer MultiMedia5':1:0
 	EndSequence
-	PlaybackPCM 11
-	CapturePCM 11
+	PlaybackPCM 40
+	CapturePCM 40
 EndSection
 
 SectionVerb
@@ -1079,8 +1079,8 @@ SectionVerb
 	DisableSequence
 		'MI2S_RX Audio Mixer MultiMedia5':1:0
 	EndSequence
-	PlaybackPCM 11
-	CapturePCM 11
+	PlaybackPCM 40
+	CapturePCM 40
 EndSection
 }
 SectionDevice
@@ -3300,7 +3300,7 @@ SectionModifier
 	DisableSequence
 		'MI2S_RX Audio Mixer MultiMedia5':1:0
 	EndSequence
-	PlaybackPCM 11
+	PlaybackPCM 40
 EndSection
 
 SectionModifier
@@ -3313,7 +3313,7 @@ SectionModifier
 	DisableSequence
 		'MI2S_RX Audio Mixer MultiMedia5':1:0
 	EndSequence
-	PlaybackPCM 11
+	PlaybackPCM 40
 EndSection
 
 SectionModifier
