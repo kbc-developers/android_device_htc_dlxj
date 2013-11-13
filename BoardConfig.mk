@@ -43,7 +43,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 #Kernel
 BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlxj user_debug=31
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlxj androidboot.selinux=permissive user_debug=31
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01400000
 TARGET_KERNEL_CONFIG := cyanogenmod_deluxe_j_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/m7wlj
