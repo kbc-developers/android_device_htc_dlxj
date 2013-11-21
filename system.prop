@@ -2,7 +2,6 @@
 # system.prop for dlx
 #
 mobiledata.interfaces=rmnet0,rmnet1
-ro.telephony.ril_class=HTCQualcommRIL
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
@@ -14,17 +13,16 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
-ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
 ro.config.svlte1x=true
+ro.ril.svdo=true
 ro.ril.transmitpower=true
 ro.baseband.arch = mdm
 ro.telephony.default_network=10
 ## For CDMA
 telephony.lteOnCdmaDevice=1
 telephony.rilV7NeedCDMALTEPhone=true
-ro.telephony.ril.v3=forceCdmaLteNetworkType
 ## For GSM/WCDMA
 #telephony.lteOnGsmDevice=1
 #ro.telephony.ril.v3=subscriptionFromSource,skipCdmaSubcription
