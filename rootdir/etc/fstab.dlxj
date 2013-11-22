@@ -6,7 +6,7 @@
 /dev/block/mmcblk0p33	/cache		ext4	noatime,nosuid,nodev,barrier=1,data=ordered	   		wait,check
 #/dev/block/mmcblk0p24  	/devlog		ext4  	noatime,nosuid,nodev,data=ordered,noauto_da_alloc	wait
 
-/devices/platform/msm_sdcc.3/mmc_host	/storage/ext_sd		auto	defaults	voldmanaged=sdcard:auto
+/devices/platform/msm_sdcc.3/mmc_host	auto		auto	defaults	voldmanaged=sdcard:auto
 
 # USB storage
-/devices/platform/msm_hsusb_host/usb	/storage/usbdisk	auto	defaults	voldmanaged=usbdisk:auto
+/devices/platform/msm_hsusb_host/usb   auto    auto    defaults           voldmanaged=usbdisk:auto
