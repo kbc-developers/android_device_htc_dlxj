@@ -400,7 +400,6 @@ SectionVerb
 	DisableSequence
 		'MI2S_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 EndSection
 
@@ -857,7 +856,6 @@ SectionVerb
 	DisableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  36
 EndSection
 
@@ -871,7 +869,6 @@ SectionVerb
 	DisableSequence
 		'HDMI Mixer MultiMedia4':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  36
 EndSection
 
@@ -913,7 +910,6 @@ SectionVerb
 	DisableSequence
 		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
 	EndSequence
-	CapturePCM 0
 	PlaybackPCM 36
 EndSection
 
@@ -928,7 +924,6 @@ SectionVerb
 	DisableSequence
 		'MI2S_RX Audio Mixer MultiMedia4':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  36
 EndSection
 }
@@ -1013,7 +1008,6 @@ SectionVerb
 		'SLIMBUS_0_RX Audio Mixer MultiMedia5':1:0
 	EndSequence
 	PlaybackPCM 40
-	CapturePCM 40
 EndSection
 
 SectionVerb
@@ -1090,7 +1084,6 @@ SectionVerb
 		'MI2S_RX Audio Mixer MultiMedia5':1:0
 	EndSequence
 	PlaybackPCM 40
-	CapturePCM 40
 EndSection
 
 SectionVerb
@@ -1104,7 +1097,6 @@ SectionVerb
 		'MI2S_RX Audio Mixer MultiMedia5':1:0
 	EndSequence
 	PlaybackPCM 40
-	CapturePCM 40
 EndSection
 }
 SectionDevice
@@ -2886,7 +2878,6 @@ SectionModifier
 
 	DisableSequence
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  0
 EndSection
 
@@ -2900,7 +2891,6 @@ SectionModifier
 	DisableSequence
 		'MI2S_RX Audio Mixer MultiMedia3':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  4
 EndSection
 
@@ -3129,7 +3119,6 @@ SectionModifier
 	DisableSequence
 		'HDMI Mixer MultiMedia4':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  36
 EndSection
 
@@ -3143,7 +3132,6 @@ SectionModifier
 	DisableSequence
 		'AUX_PCM_RX Audio Mixer MultiMedia4':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  36
 EndSection
 
@@ -3157,7 +3145,6 @@ SectionModifier
 	DisableSequence
 		'AUX_PCM_RX Audio Mixer MultiMedia4':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  36
 EndSection
 
@@ -3171,7 +3158,6 @@ SectionModifier
 	DisableSequence
 		'AFE_PCM_RX Audio Mixer MultiMedia4':1:0
 	EndSequence
-	CapturePCM  0
 	PlaybackPCM  36
 EndSection
 
