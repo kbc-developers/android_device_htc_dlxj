@@ -2878,7 +2878,7 @@ SectionModifier
 
 	DisableSequence
 	EndSequence
-	PlaybackPCM  0
+	PlaybackPCM  4
 EndSection
 
 SectionModifier
