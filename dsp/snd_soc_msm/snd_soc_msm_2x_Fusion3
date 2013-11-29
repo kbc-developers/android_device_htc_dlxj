@@ -107,20 +107,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFiFM Tx"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-EndSection
-
-SectionVerb
 	Name "HiFiHDMI"
 
 	EnableSequence
@@ -289,20 +275,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFiSpeaker FM Tx"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-	CapturePCM  0
-	PlaybackPCM  0
-EndSection
-
-SectionVerb
 	Name "HiFiSpeaker Headset"
 
 	EnableSequence
@@ -458,6 +430,30 @@ SectionVerb
 
 	DisableSequence
 		'MI2S_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+	PlaybackPCM  4
+EndSection
+
+SectionVerb
+	Name "HiFi Low PowerUSB PROXY Rx"
+
+	EnableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+	PlaybackPCM  4
+EndSection
+
+SectionVerb
+	Name "HiFi Low PowerUSB PROXY Tx"
+
+	EnableSequence
+	EndSequence
+
+	DisableSequence
 	EndSequence
 	PlaybackPCM  4
 EndSection
@@ -2203,6 +2199,27 @@ SectionDevice
 	EndSequence
 
 	ACDBID  11:2
+EndSection
+
+SectionDevice
+	Name "Voice Recognition Headset"
+
+	EnableSequence
+		'SLIM_0_TX Channels':0:One
+		'SLIM TX7 MUX':0:DEC5
+		'DEC5 MUX':0:ADC2
+		'DEC5 Volume':2:54
+		'ADC2 Volume':1:100
+	EndSequence
+
+	DisableSequence
+		'SLIM TX7 MUX':0:ZERO
+		'DEC5 MUX':0:ZERO
+		'DEC5 Volume':2:0
+		'ADC2 Volume':1:0
+	EndSequence
+
+	ACDBID  307:2
 EndSection
 
 SectionDevice
