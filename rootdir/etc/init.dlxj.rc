@@ -366,7 +366,7 @@ service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw
     class late_start
     disabled
 
-service wpa_supplicant /system/bin/wpa_supplicant \
+service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
     -O/data/misc/wifi/sockets \
@@ -376,7 +376,7 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     disabled
     oneshot
 
-service p2p_supplicant /system/bin/wpa_supplicant \
+service p2p_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf -N \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
@@ -388,29 +388,56 @@ service p2p_supplicant /system/bin/wpa_supplicant \
     disabled
     oneshot
 
-service dhcpcd_wlan0 /system/bin/dhcpcd -ABKL
+service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
+    class late_start
     disabled
     oneshot
 
-service dhcpcd_p2p /system/bin/dhcpcd -aABKL
+service dhcpcd_p2p /system/bin/dhcpcd -ABKLG
+	class late_start
 	disabled
 	oneshot
 
-service dhcpcd_bt-pan /system/bin/dhcpcd -ABKL
+service dhcpcd_bt-pan /system/bin/dhcpcd -ABKLG
+	disabled
+	oneshot
+
+service dhcpcd_bnep0 /system/bin/dhcpcd -BKLG
+	disabled
+	oneshot
+
+service dhcpcd_bnep1 /system/bin/dhcpcd -BKLG
+	disabled
+	oneshot
+
+service dhcpcd_bnep2 /system/bin/dhcpcd -BKLG
+	disabled
+	oneshot
+
+service dhcpcd_bnep3 /system/bin/dhcpcd -BKLG
+	disabled
+	oneshot
+
+service dhcpcd_bnep4 /system/bin/dhcpcd -BKLG
 	disabled
 	oneshot
 
 service iprenew_wlan0 /system/bin/dhcpcd -n
+	class late_start
 	disabled
 	oneshot
 
 service iprenew_p2p /system/bin/dhcpcd -n
+	class late_start
 	disabled
 	oneshot
 # wifi--
 
 on property:init.svc.bootanim=stopped
     	start post-boot
+
+on property:init.svc.wpa_supplicant=stopped
+    stop dhcpcd
 
 service post-boot /system/bin/sh /system/etc/init.post_boot.sh
     user root
