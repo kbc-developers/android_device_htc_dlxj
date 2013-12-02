@@ -1,26 +1,7 @@
-/dev/null                 0666   root       root
-/dev/zero                 0666   root       root
-/dev/full                 0666   root       root
-/dev/ptmx                 0666   root       root
-/dev/tty                  0666   root       root
-/dev/random               0666   root       root
-/dev/urandom              0666   root       root
-/dev/ashmem               0666   root       root
-/dev/binder               0666   root       root
 /dev/rtc0                 0666   system     system
 
-# HTC diag
-# the DIAG device node is world writable/readable.
-/dev/diag                 0666   root       root
-/dev/btdiag               0666   radio      radio
-/dev/diag_arm9            0666   radio      radio
+/dev/diag                 0660   system     radio
 /dev/diag_mdm             0666   radio      radio
-/dev/htcdiag              0666   radio      radio
-# the DIAG device node is world writable/readable.
-/dev/diag                 0666   root       root
-
-# the msm hw3d client device node is world writable/readable.
-/dev/msm_hw3dc            0666   root       root
 
 # the genlock client device node is world writable/readable.
 /dev/genlock              0666   system       system
@@ -30,77 +11,33 @@
 /dev/kgsl-3d0             0666   system       system
 /dev/kgsl-2d0             0666   system       system
 /dev/kgsl-2d1             0666   system       system
+/dev/msm_rotator          0660   system       graphics
 
 # these should not be world writable
-/dev/diag                 0660   system     radio
-/dev/diag_arm9            0660   radio      radio
 /dev/android_adb          0660   adb        adb
-/dev/android_adb_enable   0660   adb        adb
-/dev/ttyMSM0              0600   bluetooth  bluetooth
 /dev/ttyHS0               0660   bluetooth  bluetooth
 /dev/ttyGS0               0660   system     system
 /dev/uinput               0660   system     bluetooth
 /dev/uhid                 0660   system     bluetooth
 /dev/alarm                0664   system     radio
-/dev/tty0                 0660   root       system
 /dev/sdio_tty_ciq_00      0660   system     system
 /dev/graphics/*           0660   system     graphics
-/dev/msm_hw3dm            0660   system     graphics
-/dev/msm_rotator          0660   system     system
 /dev/input/*              0660   root       input
-/dev/eac                  0660   root       audio
-/dev/cam                  0660   root       camera
-/dev/pmem                 0660   system     graphics
-/dev/pmem_audio           0660   system     audio
-/dev/pmem_smipool*        0660   system     camera
-/dev/pmem_adsp*           0660   system     audio
-/dev/pmem_camera*         0660   system     camera
 /dev/oncrpc/*             0660   radio      system
 /dev/gss                  0660   gps        gps
-/dev/adsp/*               0660   system     audio
 /dev/snd/*                0660   system     audio
-/dev/gss                  0660   system     system
-/dev/mt9t013              0660   system     system
 /dev/msm_camera/*         0660   system     camera
-/dev/akm8976_daemon       0640   compass    system
-/dev/akm8976_aot          0640   compass    system
-/dev/akm8973_daemon       0640   compass    system
-/dev/akm8973_aot          0640   compass    system
-/dev/bma150               0640   compass    system
 /dev/cm3602               0640   compass    system
-/dev/akm8976_pffd         0640   compass    system
 /dev/lightsensor          0640   system     system
-/dev/radio0		  0644	 audio	    audio
+/dev/radio0               0644   audio      audio
 /dev/i2c-0                0664   root       system
 /dev/i2c-1                0664   root       system
 /dev/i2c-2                0664   root       system
 /dev/i2c-4                0664   root       system
-/dev/msm_pcm_out*         0660   system     audio
-/dev/msm_pcm_in*          0660   system     audio
-/dev/msm_mvs              0660   system     audio
-/dev/msm_voicememo        0660   system     audio
-/dev/msm_pcm_ctl*         0660   system     audio
-/dev/msm_snd*             0660   system     audio
-/dev/msm_mp3*             0660   system     audio
-/dev/audience_a1026*      0660   system     audio
 
-# HTC
-/dev/audience_a1028*      0660   system     audio
-/dev/tpa2018d1*           0660   system     audio
-/dev/msm_audpre           0660   system     audio
-/dev/msm_audio_ctl        0660   system     audio
 /dev/htc-acoustic         0660   system     audio
-/dev/tpa6185              0660   system     audio
 /dev/rt5501               0660   system     audio
-/dev/vdec                 0660   system     audio
 /dev/qseecom              0660   system     drmrpc
-/dev/tzcom                0660   system     audio
-/dev/qce                  0660   system     audio
-/dev/msm_pcm_lp_dec       0660   system     audio
-/dev/q6venc               0660   system     audio
-/dev/snd/dsp              0660   system     audio
-/dev/snd/dsp1             0660   system     audio
-/dev/snd/mixer            0660   system     audio
 /dev/smd4                 0660   system     system
 /dev/smd3                 0660   bluetooth      bluetooth
 /dev/smd2                 0660   bluetooth      bluetooth
@@ -115,36 +52,20 @@
 /dev/smdcntl5             0640   radio      radio
 /dev/smdcntl6             0640   radio      radio
 /dev/smdcntl7             0640   radio      radio
-/dev/sdioctl0             0640   radio      radio
-/dev/sdioctl1             0640   radio      radio
-/dev/sdioctl2             0640   radio      radio
-/dev/sdioctl3             0640   radio      radio
-/dev/sdioctl4             0640   radio      radio
-/dev/sdioctl4             0640   radio      radio
-/dev/sdioctl5             0640   radio      radio
-/dev/sdioctl6             0640   radio      radio
-/dev/sdioctl7             0640   radio      radio
-/dev/sdioctl8             0640   radio      radio
 /dev/rmnet_mux_ctrl       0640   radio      radio
 /dev/hsicctl0             0640   radio      radio
 /dev/hsicctl1             0640   radio      radio
 /dev/hsicctl2             0640   radio      radio
 /dev/hsicctl3             0640   radio      radio
-/dev/qemu_trace           0666   system     system
-/dev/qmi                  0640   radio      radio
 /dev/qmi0                 0640   radio      radio
 /dev/qmi1                 0640   radio      radio
 /dev/qmi2                 0640   radio      radio
-/dev/bus/usb/*            0660   root       usb
 /dev/gemini*              0660   system     camera
 /dev/rawchip0             0660   system     camera
-/dev/mtp_usb              0660   root       mtp
 /dev/mdm                  0660   system     radio
 /dev/ttyHSL1              0660   system     system
-/dev/tty_sdio_00          0660   system     system
 /dev/block/mmcblk0p17     0660   system     system
 /dev/block/mmcblk0p18     0660   system     system
-/dev/usb_accessory        0660   root       usb
 /dev/video*               0660   system     camera
 /dev/tun                  0660   system     vpn
 
@@ -154,8 +75,6 @@
 # wifi
 /dev/rfkill               0660   root       wifi
 
-# CDMA radio interface MUX
-/dev/ts0710mux*           0640   radio      radio
 /dev/ppp                  0660   radio      vpn
 
 #permissions for video
@@ -163,8 +82,6 @@
 /dev/msm_vidc_dec         0660  system       audio
 /dev/msm_vidc_dec_sec     0660  system       audio
 /dev/msm_vidc_enc         0660  system       audio
-#rfcomm device for Bluetooth DUN
-/dev/rfcomm0              0660   bluetooth   bluetooth
 
 #permissions for audio
 /dev/msm_amrnb            0660  system       audio
@@ -174,30 +91,30 @@
 /dev/msm_aac_in           0660  system       audio
 /dev/msm_qcelp            0660  system       audio
 /dev/msm_evrc             0660  system       audio
-/dev/msm_fm               0660  system       audio
 /dev/msm_acdb             0660  system       audio
 /dev/msm_rtac             0660  system       audio
 /dev/msm_wma              0660  system       audio
 /dev/msm_wmapro           0660  system       audio
 /dev/msm_qcelp_in         0660  system       audio
 /dev/msm_evrc_in          0660  system       audio
-/dev/msm_preproc_ctl      0660  system       audio
-/dev/msm_a2dp_in          0640  system       audio
 /dev/msm_amrnb_in         0640  system       audio
+#permissions for sensors
+/dev/msm_dsps             0660  system       system
 
-# CDMA radio interface MUX
-/dev/ts0710mux*           0640   radio      radio
-/dev/ppp                  0660   radio      vpn
+/dev/ttyHSL2              0666   system      system
+
+# HtcCarGPS
+/dev/ttyHSUSB1                                 0600    system  system
 # simlock
 /dev/simlock              0660  radio        radio
+
+# HTC drm
+/dev/htcdrm               0660  drm          system
 
 # dlx sensors
 /dev/mpu                  0664  system       system
 /dev/mpuirq               0664  system       system
 /dev/timerirq             0664  system       system
-/dev/akm8975_aot          0640  compass      system
-/dev/akm8975_daemon       0640  compass      system
-/dev/bma150               0640  compass      system
 
 # dlx NFC
 /dev/pn544                0600  nfc          nfc
@@ -205,7 +122,9 @@
 # Audio
 /dev/rt5501               0666  system       audio
 /dev/tfa9887              0666  system       audio
-/dev/tfa9887l             0666  system       audio
+
+# Radio
+/dev/radio_feedback       0660  radio        radio
 
 # USB peripheral
 /dev/bus/usb/*            0660  root         usb
@@ -218,8 +137,6 @@
 /sys/devices/virtual/input/input*   poll_delay  0660  root   input
 /sys/devices/virtual/usb_composite/*   enable      0664  root   system
 /sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
-#permissions for sensors
-/dev/msm_dsps             0660  system       system
 
 # felica device file nodes
 /dev/felica            0666   root  root
@@ -260,7 +177,3 @@
 # for modem link
 /sys/module/serial/parameters/modem_enabled    0600    system  system
 
-/dev/ttyHSL2              0666   system      system
-
-# HtcCarGPS
-/dev/ttyHSUSB1                                 0600    system  system
