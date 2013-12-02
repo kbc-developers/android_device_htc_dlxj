@@ -70,7 +70,7 @@
 /dev/cm3602               0640   compass    system
 /dev/akm8976_pffd         0640   compass    system
 /dev/lightsensor          0640   system     system
-/dev/radio0               0644   fm_radio   fm_radio
+/dev/radio0		  0644	 audio	    audio
 /dev/i2c-0                0664   root       system
 /dev/i2c-1                0664   root       system
 /dev/i2c-2                0664   root       system
@@ -260,11 +260,7 @@
 # for modem link
 /sys/module/serial/parameters/modem_enabled    0600    system  system
 
-# irda
-/dev/ttyHSL2              0666   irda      irda
+/dev/ttyHSL2              0666   system      system
 
 # HtcCarGPS
 /dev/ttyHSUSB1                                 0600    system  system
-
-# for autobot car pc
-/dev/ttyHSUSB3                                 0660    autobot_access autobot_access

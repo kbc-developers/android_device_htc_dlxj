@@ -222,9 +222,6 @@ on boot
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
 
-    #Create directories for QuIPS
-    mkdir /data/misc/quipc 0770 gps system
-
     #Create directories for Location services
     mkdir /data/misc/location 0770 gps gps
     mkdir /data/misc/location/mq 0770 gps gps
@@ -256,9 +253,6 @@ on boot
     chown system system /sys/class/android_usb/f_modem/on
     chown system system /sys/class/android_usb/f_diag/on
     chown system system /sys/class/android_usb/f_rmnet/on
-
-    chown root system /proc/driver/hdf
-    chmod 0664 /proc/driver/hdf
 
     # low charge current in voice call
     chown radio radio /sys/class/power_supply/battery/phone_call
@@ -468,24 +462,11 @@ service netmgrd /system/bin/netmgrd
 
 #--SSD_RIL
 
-service tpd /sbin/tpd
-    class core
-    cgroup bg
-    user root
-
 # bugreport is triggered by the KEY_VOL-UP and KEY_VOL-DOWN keycodes
 service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
     disabled
-    cgroup bg
     oneshot
     keycodes 114 115
-
-service ril-daemon /system/bin/rild
-    class core
-    socket rild stream 660 root radio
-    socket rild-debug stream 660 radio system
-    user root
-    group radio cache inet misc audio media_rw sdcard_rw qcom_oncrpc diag qcom_diag
 
 on property:dev.bootcomplete=1
     start mpdecision
@@ -501,20 +482,6 @@ service charging /system/bin/charging
     group root
     disabled
     oneshot
-
-# Widevine DRM start
-service qseecomd /system/bin/qseecomd
-    class late_start
-    user system
-    group system
-
-service hcheck /system/bin/hcheck
-    class late_start
-    user system
-    group system
-    oneshot
-
-# Widevine DRM end
 
 # OMA DRM change start
 service fusermount /system/bin/fusermount -u /data/htcfs
