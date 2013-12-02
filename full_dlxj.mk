@@ -197,7 +197,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.combined_signal=true \
     ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000 \
     ro.opengles.version=196608 \
-    persist.eons.enabled=false
+    persist.eons.enabled=false \
+    ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp

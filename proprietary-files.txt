@@ -88,7 +88,7 @@ lib/libgsl.so
 lib/libhtccamera_yushaniiproc.so
 lib/libcsd-client.so
 lib/libril-qc-qmi-1.so
-lib/libqc-opt.so
+vendor/lib/libqc-opt.so
 lib/libchromatix_imx135_hdr.so
 lib/libmm-abl.so
 lib/hw/sensors.dlx.so
