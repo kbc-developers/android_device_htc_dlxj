@@ -16,6 +16,7 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
+ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
 ro.config.svlte1x=true
 ro.ril.transmitpower=true
 ro.baseband.arch = mdm
