@@ -35,8 +35,9 @@ PRODUCT_PACKAGES += \
     init.dlxj.usb.rc \
     ueventd.dlxj.rc
 
-PRODUCT_PACKAGES += \
-    libnetcmdiface
+# Post boot service
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/init.post_boot.sh:system/etc/init.post_boot.sh
 
 # Recovery
 PRODUCT_PACKAGES += \
@@ -45,6 +46,9 @@ PRODUCT_PACKAGES += \
     detect_key \
     offmode_charging \
     power_test
+
+PRODUCT_PACKAGES += \
+    libnetcmdiface
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
