@@ -52,10 +52,7 @@ ro.product.hwreset = 1
 
 ro.hwui.text_cache_width=2048
 ro.setupwizard.enable_bypass=1
-dalvik.vm.lockprof.threshold=500
 ro.com.google.locationfeatures=1
-dalvik.vm.dexopt-flags=m=y
-ro.com.google.clientidbase=android-htc
 ro.com.google.clientidbase.yt=android-verizon
 ro.com.google.clientidbase.am=android-verizon
 ro.com.google.clientidbase.gmm=android-htc
@@ -78,4 +75,3 @@ ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,9000
 ro.opengles.version=196608
 persist.eons.enabled=false
 ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
-persist.sys.usb.config=mtp
