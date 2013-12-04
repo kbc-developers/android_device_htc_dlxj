@@ -156,47 +156,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Torch
 
-# Increase the HWUI font cache since we have tons of RAM
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hwui.text_cache_width=2048
-
-# Extra properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.setupwizard.enable_bypass=1 \
-    dalvik.vm.lockprof.threshold=500 \
-    ro.com.google.locationfeatures=1 \
-    dalvik.vm.dexopt-flags=m=y \
-    ro.com.google.clientidbase=android-htc \
-    ro.com.google.clientidbase.yt=android-verizon \
-    ro.com.google.clientidbase.am=android-verizon \
-    ro.com.google.clientidbase.gmm=android-htc \
-    ro.com.google.clientidbase.ms=android-verizon \
-    gsm.sim.operator.alpha = Verizon \
-    gsm.sim.operator.numeric = 310012 \
-    gsm.sim.operator.iso-country = us \
-    gsm.operator.alpha = Verizon \
-    gsm.operator.numeric = 310012 \
-    gsm.operator.iso-country = us \
-    ro.cdma.home.operator.alpha = Verizon \
-    ro.cdma.home.operator.numeric = 310012 \
-    ro.cdma.data_retry_config=max_retries=infinite,0,0,60000,120000,480000,900000 \
-    ro.ril.set.mtusize=1428 \
-    persist.radio.snapshot_enabled=1 \
-    persist.radio.snapshot_timer=22 \
-    ro.config.multimode_cdma=1 \
-    ro.config.combined_signal=true \
-    ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000 \
-    ro.opengles.version=196608 \
-    persist.eons.enabled=false \
-    ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
-
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
-
-PRODUCT_CHARACTERISTICS := nosdcard
 
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
