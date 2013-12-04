@@ -41,7 +41,7 @@ TARGET_BOOTLOADER_BOARD_NAME := dlxj
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Adreno configuration
-BOARD_EGL_CFG := device/htc/dlx/configs/egl.cfg
+BOARD_EGL_CFG := device/htc/dlxj/configs/egl.cfg
 
 #Kernel
 BOARD_KERNEL_BASE := 0x80600000
