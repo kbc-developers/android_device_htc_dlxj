@@ -324,9 +324,6 @@ service kickstart /system/bin/qcks -1 modem_st1 -2 modem_st2 -3 radio_config -4 
 	user root
 	oneshot
 
-service startup /system/bin/sh /init.qcom.sh
-	class late_start
-
 # create virtual SD card at /mnt/sdcard, based on the /data/media directory
 # daemon will drop to user/group system/media_rw after initializing
 # underlying files in /data/media will be created with user and group media_rw (1023)
