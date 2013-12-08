@@ -22,5 +22,9 @@ PRODUCT_MODEL := HTC J butterfly
 PRODUCT_MANUFACTURER := HTC
 
 # Set build fingerprint / ID / Product Name etc.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_dlxj BUILD_FINGERPRINT=verizon_wwe/dlxj/dlxj:4.1.1/JRO03C/123160.4:user/release-keys PRIVATE_BUILD_DESC="1.15.605.4 CL123160 release-keys" BUILD_NUMBER=123160
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=dlxj \
+    BUILD_ID=JDQ39 \
+    BUILD_FINGERPRINT=htc/verizon_wwe/dlx:4.2.2/JDQ39/277065.4:user/release-keys \
+    PRIVATE_BUILD_DESC="3.06.605.4 CL277065 release-keys"
 
