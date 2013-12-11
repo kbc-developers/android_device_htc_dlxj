@@ -1,5 +1,3 @@
-# Master file for snd_soc_msm tabla 2.0 sound card proj=m7  DMIC DATE= 20130314
-# Lists all use case verbs
 SectionUseCase."FM A2DP REC" {
 SectionVerb
 	Name "FM A2DP REC"
@@ -1531,7 +1529,7 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC8
 		'DEC8 MUX':0:DMIC2
-		'DEC8 Volume':2:58
+		'DEC8 Volume':2:56
 		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
@@ -2186,7 +2184,6 @@ SectionDevice
 		'SLIM TX7 MUX':0:DEC8
 		'DEC8 MUX':0:DMIC2
 		'DEC8 Volume':2:68
-		'ADC1 Volume':1:100
 		'MICBIAS1 CAPLESS Switch':1:1
 	EndSequence
 
@@ -2194,7 +2191,6 @@ SectionDevice
 		'SLIM TX7 MUX':0:ZERO
 		'DEC8 MUX':0:ZERO
 		'DEC8 Volume':2:68
-		'ADC1 Volume':1:0
 		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
