@@ -75,3 +75,4 @@ ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,9000
 ro.opengles.version=196608
 persist.eons.enabled=false
 ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
+persist.sys.usb.config=mtp
