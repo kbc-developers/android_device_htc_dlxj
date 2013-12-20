@@ -15,7 +15,6 @@ etc/firmware/fw_bcm4334.bin
 etc/firmware/hcheck.mdt
 etc/firmware/hcheck.b00
 etc/firmware/BCM4334B0_002.001.013.0942.0949.hcd
-etc/firmware/leia_pm4_470.fw
 etc/firmware/vidc.mdt
 etc/firmware/vidc.b01
 etc/firmware/hcheck.b02
@@ -23,17 +22,11 @@ etc/firmware/fw_bcm4334_apsta.bin
 etc/firmware/tzapps.b01
 etc/firmware/ILP0100_IPM_Data_out.bin
 etc/firmware/tzapps.b00
-etc/firmware/leia_pfp_470.fw
 etc/firmware/vidc.b02
 etc/firmware/fw_bcm4334_p2p.bin
 etc/firmware/tzapps.b03
 etc/firmware/vidc.b00
 etc/firmware/a300_pm4.fw
-vendor/firmware/keymaster/keymaster.mdt
-vendor/firmware/keymaster/keymaster.b01
-vendor/firmware/keymaster/keymaster.b03
-vendor/firmware/keymaster/keymaster.b02
-vendor/firmware/keymaster/keymaster.b00
 vendor/lib/libdrmtime.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/drm/libdrmwvmplugin.so
@@ -57,12 +50,6 @@ bin/thermald
 bin/mpdecision
 lib/libmmcamera_interface2.so
 lib/libchromatix_vd6869_hdr.so
-lib/libc2d2_z180.so
-lib/egl/eglsubAndroid.so
-lib/egl/libGLESv1_CM_adreno200.so
-lib/egl/libGLESv2_adreno200.so
-lib/egl/libEGL_adreno200.so
-lib/egl/libq3dtools_adreno200.so
 lib/libril-qcril-hook-oem.so
 lib/libdiag.so
 lib/libmmcamera_hdr_lib.so
@@ -79,12 +66,10 @@ lib/libchromatix_vd6869_zoe.so
 lib/libchromatix_vd6869_zsl.so
 lib/libmpl_jni.so
 lib/libqmi_common_so.so
-lib/libc2d2_a3xx.so
 lib/libcameraface.so
 lib/libmmcamera_statsproc31.so
 lib/libimu.so
 lib/libchromatix_vd6869_hfr_60fps.so
-lib/libgsl.so
 lib/libhtccamera_yushaniiproc.so
 lib/libcsd-client.so
 lib/libril-qc-qmi-1.so
@@ -102,7 +87,6 @@ lib/libnetmgr.so
 lib/libmm-abl-oem.so
 lib/libHTC_DIS.so
 lib/liboemcamera.so
-lib/libsc-a3xx.so
 lib/libimage-omx-common.so
 lib/libchromatix_ar0260_zsl.so
 lib/libmmipl.so
@@ -121,7 +105,6 @@ lib/libimage-jpeg-dec-omx-comp.so
 lib/libmm-color-convertor.so
 lib/libchromatix_imx175_default_video.so
 lib/libchromatix_ar0260_preview.so
-lib/libC2D2.so
 lib/libqmi_cci.so
 lib/libext3-fileio.so
 lib/libhtc_rilhook.so
@@ -145,7 +128,6 @@ lib/libmmcamera_rawchipproc.so
 lib/libqmi_client_qmux.so
 lib/libaudcal.so
 lib/libBeautyChat.so
-lib/libllvm-a3xx.so
 lib/libcameraasd.so
 lib/libqmiservices.so
 lib/libimage-jpeg-enc-omx-comp.so
