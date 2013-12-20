@@ -34,6 +34,22 @@ vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/libdrmfs.so
+vendor/lib/egl/eglsubAndroid.so
+vendor/lib/egl/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/libGLESv2S3D_adreno.so
+vendor/lib/egl/libq3dtools_adreno.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libC2D2.so
+vendor/lib/libc2d30-a3xx.so
+vendor/lib/libc2d30.so
+vendor/lib/libgsl.so
+vendor/lib/libllvm-a3xx.so
+vendor/lib/librs_adreno_sha1.so
+vendor/lib/librs_adreno.so
+vendor/lib/libRSDriver_adreno.so
+vendor/lib/libsc-a3xx.so
 bin/akmd
 bin/bridgemgrd
 bin/ks
@@ -51,6 +67,7 @@ bin/mpdecision
 lib/libmmcamera_interface2.so
 lib/libchromatix_vd6869_hdr.so
 lib/libril-qcril-hook-oem.so
+lib/hw/vendor-camera.msm8960.so
 lib/libdiag.so
 lib/libmmcamera_hdr_lib.so
 lib/libQSEEComAPI.so
@@ -77,7 +94,6 @@ vendor/lib/libqc-opt.so
 lib/libchromatix_imx135_hdr.so
 lib/libmm-abl.so
 lib/hw/sensors.dlx.so
-lib/hw/camera.msm8960.so
 lib/libmmstillomx.so
 lib/libchromatix_vd6869_video_hdr.so
 lib/libchromatix_imx175_hdr.so
@@ -102,6 +118,7 @@ lib/libloc_api_v02.so
 lib/libmpl.so
 lib/libchromatix_imx135_hfr.so
 lib/libimage-jpeg-dec-omx-comp.so
+lib/libI420colorconvert.so
 lib/libmm-color-convertor.so
 lib/libchromatix_imx175_default_video.so
 lib/libchromatix_ar0260_preview.so
