@@ -233,19 +233,6 @@ static char *camera_fixup_setparams(int id, const char *settings)
         }
     }
 
-    /* Hack!
-     * Fix crashes when switching cameras in video mode.  It seems like the camera
-     * does not correctly adjust the focus mode when switching cameras.
-     */
-    if (isVideo && id == 1) {
-        params.set(android::CameraParameters::KEY_FOCUS_MODE, "fixed");
-    } else if (isVideo && id == 0) {
-        const char *focus_mode = params.get(android::CameraParameters::KEY_FOCUS_MODE);
-        if (focus_mode && !strcmp(focus_mode, "fixed")) {
-            params.set(android::CameraParameters::KEY_FOCUS_MODE, "continuous-video");
-        }
-    }
-
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);
     params.dump();
