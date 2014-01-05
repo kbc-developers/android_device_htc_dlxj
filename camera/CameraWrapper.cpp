@@ -159,7 +159,7 @@ static char *camera_fixup_getparams(int id, const char *settings)
 
     /* Set sensor parameters */
     if (id == 0) {
-        params.set(android::CameraParameters::KEY_FOCAL_LENGTH, "3.82");
+        params.set(android::CameraParameters::KEY_FOCAL_LENGTH, "3.63");
         params.set(android::CameraParameters::KEY_HORIZONTAL_VIEW_ANGLE, "69.6");
         params.set(android::CameraParameters::KEY_VERTICAL_VIEW_ANGLE, "43.0");
     }
