@@ -64,6 +64,7 @@ bin/qcks
 bin/netmgrd
 bin/thermald
 bin/mpdecision
+lib/libCB.so
 lib/libmmcamera_interface2.so
 lib/libchromatix_vd6869_hdr.so
 lib/libril-qcril-hook-oem.so
