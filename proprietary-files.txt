@@ -119,6 +119,7 @@ lib/libloc_api_v02.so
 lib/libmpl.so
 lib/libchromatix_imx135_hfr.so
 lib/libimage-jpeg-dec-omx-comp.so
+lib/libExtendedExtractor.so
 lib/libI420colorconvert.so
 lib/libmm-color-convertor.so
 lib/libchromatix_imx175_default_video.so
