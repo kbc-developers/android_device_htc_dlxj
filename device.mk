@@ -22,3 +22,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/dlxj/overlay
 
 # Inherit from msm8960-common
 $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml
