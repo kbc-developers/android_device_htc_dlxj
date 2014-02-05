@@ -25,7 +25,7 @@
 # against the traditional rules of inheritance).
 
 # inherit from common msm8960
--include device/htc/msm8960-common/BoardConfigCommon.mk
+include device/htc/msm8960-common/BoardConfigCommon.mk
 
 TARGET_SPECIFIC_HEADER_PATH := device/htc/dlxj/include
 
