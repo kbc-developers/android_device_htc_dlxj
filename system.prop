@@ -76,3 +76,7 @@ persist.eons.enabled=false
 ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
 persist.sys.usb.config=mtp
 mm.enable.smoothstreaming=true
+
+# CWMR Options
+ro.cwm.forbid_format=/devlog,/reserve
+ro.cwm.forbid_mount=/devlog,/reserve
