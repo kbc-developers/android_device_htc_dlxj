@@ -1,0 +1,13 @@
+LOCAL_PATH := $(call my-dir)
+include $(CLEAR_VARS)
+
+LOCAL_CERTIFICATE := shared
+LOCAL_MODULE := MobileFeliCaWebPluginBoot
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+LOCAL_MODULE_TAGS := optional
+LOCAL_PACKAGE_NAME := MobileFeliCaWebPluginBoot
+LOCAL_SRC_FILES := MobileFeliCaWebPluginBoot.apk
+
+include $(BUILD_PREBUILT)
+

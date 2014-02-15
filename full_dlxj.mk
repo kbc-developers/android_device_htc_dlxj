@@ -168,6 +168,14 @@ PRODUCT_PACKAGES += \
 #    Tag \
 #    com.android.nfc_extras
 
+# FeliCa
+PRODUCT_PACKAGES += \
+	KDDI_Felicalock \
+	MobileFeliCaClient \
+	MobileFeliCaMenuApp \
+	MobileFeliCaSettingApp \
+	MobileFeliCaWebPluginBoot
+
 # Torch
 PRODUCT_PACKAGES += \
     Torch
