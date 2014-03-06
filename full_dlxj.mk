@@ -104,29 +104,16 @@ PRODUCT_COPY_FILES += \
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
-    device/htc/dlxj/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/htc/dlxj/keylayout/dummy_keypad.kl:system/usr/keylayout/dummy_keypad.kl \
-    device/htc/dlxj/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
     device/htc/dlxj/keylayout/projector-Keypad.kl:system/usr/keylayout/projector-Keypad.kl \
     device/htc/dlxj/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/dlxj/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
     device/htc/dlxj/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
-    device/htc/dlxj/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/htc/dlxj/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl \
-    device/htc/dlxj/keylayout/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_028e.kl \
-    device/htc/dlxj/keylayout/Vendor_046d_Product_c216.kl:system/usr/keylayout/Vendor_046d_Product_c216.kl \
-    device/htc/dlxj/keylayout/Vendor_046d_Product_c294.kl:system/usr/keylayout/Vendor_046d_Product_c294.kl \
-    device/htc/dlxj/keylayout/Vendor_046d_Product_c299.kl:system/usr/keylayout/Vendor_046d_Product_c299.kl \
-    device/htc/dlxj/keylayout/Vendor_046d_Product_c532.kl:system/usr/keylayout/Vendor_046d_Product_c532.kl \
-    device/htc/dlxj/keylayout/Vendor_054c_Product_0268.kl:system/usr/keylayout/Vendor_054c_Product_0268.kl \
-    device/htc/dlxj/keylayout/Vendor_05ac_Product_0239.kl:system/usr/keylayout/Vendor_05ac_Product_0239.kl \
-    device/htc/dlxj/keylayout/Vendor_22b8_Product_093d.kl:system/usr/keylayout/Vendor_22b8_Product_093d.kl 
+    device/htc/dlxj/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl
 
 # Input device config
 PRODUCT_COPY_FILES += \
     device/htc/dlxj/idc/projector_input.idc:system/usr/idc/projector_input.idc \
-    device/htc/dlxj/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
-    device/htc/dlxj/idc/qwerty.idc:system/usr/idc/qwerty.idc \
     device/htc/dlxj/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
 # Audio
