@@ -6,7 +6,7 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_RELEASE_NAME := dlxj
 
 # overlays
-PRODUCT_PACKAGE_OVERLAYS += device/htc/dlx/overlay
+PRODUCT_PACKAGE_OVERLAYS += device/htc/dlxj/overlay
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
