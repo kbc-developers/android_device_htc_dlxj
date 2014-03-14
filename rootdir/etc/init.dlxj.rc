@@ -374,26 +374,6 @@ service dhcpcd_bt-pan /system/bin/dhcpcd -ABKLG
 	disabled
 	oneshot
 
-service dhcpcd_bnep0 /system/bin/dhcpcd -BKLG
-	disabled
-	oneshot
-
-service dhcpcd_bnep1 /system/bin/dhcpcd -BKLG
-	disabled
-	oneshot
-
-service dhcpcd_bnep2 /system/bin/dhcpcd -BKLG
-	disabled
-	oneshot
-
-service dhcpcd_bnep3 /system/bin/dhcpcd -BKLG
-	disabled
-	oneshot
-
-service dhcpcd_bnep4 /system/bin/dhcpcd -BKLG
-	disabled
-	oneshot
-
 service iprenew_wlan0 /system/bin/dhcpcd -n
 	class late_start
 	disabled
