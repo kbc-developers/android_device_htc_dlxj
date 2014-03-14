@@ -22,6 +22,7 @@ ro.baseband.arch = mdm
 ro.telephony.default_network=10
 ## For CDMA
 telephony.lteOnCdmaDevice=1
+telephony.rilV7NeedCDMALTEPhone=true
 ## For GSM/WCDMA
 #telephony.lteOnGsmDevice=1
 #ro.telephony.ril.v3=subscriptionFromSource,skipCdmaSubcription
