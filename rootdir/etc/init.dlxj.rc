@@ -88,9 +88,9 @@ on fs
 
    symlink /system/vendor/lib /vendor/lib
 
-    # for NFC
-    symlink /system/vendor/pittpatt /vendor/pittpatt
-    symlink /system/vendor/firmware/libpn544_fw.so /vendor/firmware/libpn544_fw.so
+   # for NFC
+   symlink /system/vendor/pittpatt /vendor/pittpatt
+   symlink /system/vendor/firmware/libpn544_fw.so /vendor/firmware/libpn544_fw.so
 
 on boot
     chmod 0770 /nfc_record
@@ -125,7 +125,7 @@ on boot
     # Change owner and group for media server and surface flinger
     chown system system /sys/devices/virtual/graphics/fb1/format_3d
     chown system system /sys/devices/virtual/graphics/fb1/hpd
-  
+
     # for Felica add
     mkdir /data/system 0775 system system
     exec system/bin/felica_startup
@@ -300,7 +300,7 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
 
     # enable sleep_clk2 on DLXj XA board only
-on property:ro.devicerev=0 
+on property:ro.devicerev=0
     mount -t debugfs none /sys/kernel/debug
     write /sys/kernel/debug/pm8921-dbg/addr 0x10d
     write /sys/kernel/debug/pm8921-dbg/data 0x08
@@ -463,12 +463,12 @@ service charging /system/bin/charging
 
 # OMA DRM change start
 service fusermount /system/bin/fusermount -u /data/htcfs
-    	disabled
-    	oneshot
+    disabled
+    oneshot
 
 service htcfs /system/bin/htcfs /data/htcfs -f -o allow_other
-    	class main
-     	onrestart restart fusermount
+    class main
+    onrestart restart fusermount
 
 service felica_daemon /system/bin/felica_daemon
     class late_start
@@ -512,3 +512,49 @@ on property:service.adb.root=1
     write /sys/class/android_usb/android0/enable 0
     restart adbd
     write /sys/class/android_usb/android0/enable 1
+
+# CM Performance Profiles
+
+# Powersave
+on property:sys.perf.profile=0
+    start mpdecision
+    start thermald
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor conservative
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor conservative
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor conservative
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor conservative
+    write /sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor ondemand
+
+# Balanced
+on property:sys.perf.profile=1
+    start mpdecision
+    start thermald
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor ondemand
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor ondemand
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor ondemand
+    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate 50000
+    write /sys/devices/system/cpu/cpufreq/ondemand/up_threshold 90
+    write /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy 1
+    write /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor 4
+    write /sys/devices/system/cpu/cpufreq/ondemand/down_differential 10
+    write /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_multi_core
+    write /sys/devices/system/cpu/cpufreq/ondemand/down_differential_multi_
+    write /sys/devices/system/cpu/cpufreq/ondemand/optimal_freq 918000
+    write /sys/devices/system/cpu/cpufreq/ondemand/sync_freq 1026000
+    write /sys/devices/system/cpu/cpufreq/ondemand/up_threshold_any_cpu_loa
+    write /sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor ondemand
+
+# High performance
+on property:sys.perf.profile=2
+    stop mpdecision
+    stop thermald
+    write /sys/devices/system/cpu/cpu0/online 1
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor performance
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor performance
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor performance
+    write /sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor performance

@@ -122,7 +122,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8960
+	camera.msm8960
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -139,15 +139,6 @@ PRODUCT_PACKAGES += \
 # NFC
 #PRODUCT_PACKAGES += \
 #    nfc.msm8960 \
-#    libnfc \
-#    libnfc_ndef \
-#    libnfc_jni \
-#    Nfc \
-#    Tag \
-#    com.android.nfc_extras
-
-# NFC
-#PRODUCT_PACKAGES += \
 #    libnfc \
 #    libnfc_ndef \
 #    libnfc_jni \
@@ -176,7 +167,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi xxhdpi
-PRODUCT_LOCALES += en_US
+PRODUCT_LOCALES += ja_JP
 
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
