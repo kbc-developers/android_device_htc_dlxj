@@ -124,6 +124,7 @@ static char *camera_fixup_getparams(int id, const char *settings)
     /* Disable face detection */
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_HW, "0");
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_SW, "0");
+    params.set(android::CameraParameters::KEY_FACE_DETECTION, "off");
 
     /* Advertise video HDR values */
     params.set(KEY_VIDEO_HDR_VALUES, "off,on");
@@ -207,6 +208,7 @@ static char *camera_fixup_setparams(int id, const char *settings)
     /* Disable face detection */
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_HW, "0");
     params.set(android::CameraParameters::KEY_MAX_NUM_DETECTED_FACES_SW, "0");
+    params.set(android::CameraParameters::KEY_FACE_DETECTION, "off");
 
     /* Fix video HDR values */
     if (!strcmp(videoHdr, "on")) {
