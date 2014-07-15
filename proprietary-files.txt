@@ -143,6 +143,11 @@ etc/firmware/tzapps.b00
 etc/firmware/tzapps.b01
 etc/firmware/tzapps.b02
 etc/firmware/tzapps.b03
+vendor/firmware/keymaster.b00
+vendor/firmware/keymaster.b01
+vendor/firmware/keymaster.b02
+vendor/firmware/keymaster.b03
+vendor/firmware/keymaster.mdt
 
 etc/firmware/hcheck.b01
 etc/firmware/hcheck.b03
@@ -157,6 +162,8 @@ etc/firmware/fw_bcm4334_apsta.bin
 etc/firmware/fw_bcm4334_p2p.bin
 
 # DRM
+bin/qseecomd
+bin/hcheck
 lib/libQSEEComAPI.so
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/libdrmfs.so
