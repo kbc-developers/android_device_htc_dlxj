@@ -69,7 +69,7 @@ case "$target" in
         chown system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
         chown system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
         echo 20 > /sys/module/cpu_boost/parameters/boost_ms
-        echo 1566000 > /sys/module/cpu_boost/parameters/sync_threshold
+        echo 1242000 > /sys/module/cpu_boost/parameters/sync_threshold
         echo 1134000 > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
         echo 1 > /dev/cpuctl/apps/cpu.notify_on_migrate
