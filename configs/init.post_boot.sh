@@ -72,6 +72,8 @@ case "$target" in
         echo 1242000 > /sys/module/cpu_boost/parameters/sync_threshold
         echo 1134000 > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
+        echo 1512000 > /sys/module/cpu_boost/parameters/plug_boost_freq
+        echo 1 > /sys/module/cpu_boost/parameters/plug_boost_ms
         echo 1 > /dev/cpuctl/apps/cpu.notify_on_migrate
         echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         echo 384000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
