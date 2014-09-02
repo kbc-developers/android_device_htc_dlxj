@@ -47,20 +47,10 @@ on init
 
 # on emmc mount the partition containing firmware
 on fs
+   mkdir /devlog 0700 root root
+   mkdir /reserve 0700 root root
    mount_all /fstab.dlxj
    setprop ro.crypto.fuse_sdcard true
-
-   mkdir /nfc_record 0700 system system
-   devwait emmc@nfc_record
-   mount ext4 emmc@nfc_record /nfc_record nosuid nodev noatime barrier=1
-
-   mkdir /ramdump 0700 root root
-   devwait emmc@reserve
-   mount vfat emmc@reserve /ramdump rw
-   umount /ramdump
-
-   mkdir /devlog 0700 root root
-   mount ext4 /dev/block/mmcblk0p24 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
 
    mkdir /data/tombstones 0771 system system
    symlink /data/tombstones /tombstones

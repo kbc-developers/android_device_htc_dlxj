@@ -9,7 +9,7 @@
 /dev/block/mmcblk0p34	/data		ext4	noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc	wait,check,encryptable=/dev/block/mmcblk0p29
 /dev/block/mmcblk0p33	/cache		ext4	noatime,nosuid,nodev,barrier=1,data=ordered			wait,check
 /dev/block/mmcblk0p21	/misc		emmc	defaults							defaults
-/dev/block/mmcblk0p24	/devlog		ext4	defaults							defaults
+/dev/block/mmcblk0p24	/devlog		ext4	noatime,nosuid,nodev,data=ordered,noauto_da_alloc		wait
 /dev/block/mmcblk0p31	/reserve	vfat	defaults							defaults
 
 # External SD card
