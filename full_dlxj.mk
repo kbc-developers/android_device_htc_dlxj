@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
     charger \
     choice_fn \
     offmode_charging \
+    chargeled \
     init.recovery.dlxj.rc
 
 PRODUCT_PACKAGES += \
