@@ -41,10 +41,13 @@ PRODUCT_COPY_FILES += \
 # Recovery
 PRODUCT_PACKAGES += \
     lpm.rc \
-    charger \
+    detect_key \
+    power_test \
     choice_fn \
-    offmode_charging \
     chargeled \
+    offmode_charging \
+    offmode_charging_res_images \
+    offmode_charging_warn_res_images \
     init.recovery.dlxj.rc
 
 PRODUCT_PACKAGES += \
