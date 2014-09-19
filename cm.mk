@@ -27,6 +27,6 @@ PRODUCT_MANUFACTURER := HTC
 # Set build fingerprint / ID / Product Name etc.
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=dlxj \
-    BUILD_FINGERPRINT=htc/verizon_wwe/dlx:4.2.2/JDQ39/277065.4:user/release-keys \
-    PRIVATE_BUILD_DESC="3.06.605.4 CL277065 release-keys"
+    BUILD_FINGERPRINT=htc/verizon_wwe/dlx:4.4.2/KOT49H/322791.1:user/release-keys \
+    PRIVATE_BUILD_DESC="4.09.605.1 CL322791 release-keys"
 
