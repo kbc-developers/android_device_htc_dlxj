@@ -244,10 +244,6 @@ static char *camera_fixup_setparams(int id, const char *settings)
         }
     }
 
-    if (isVideo && id == 1) {
-	params.remove(android::CameraParameters::KEY_ROTATION);
-    }
-
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);
     params.dump();
