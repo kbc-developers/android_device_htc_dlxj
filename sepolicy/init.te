@@ -1,0 +1,2 @@
+allow init su_exec:file execute_no_trans;
+#FIXME allow init system_file:dir create;

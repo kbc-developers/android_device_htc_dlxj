@@ -1,0 +1,6 @@
+type amp_dev, dev_type;
+type lightsensor_dev, dev_type;
+type prox_dev, dev_type;
+type rfkill_dev, dev_type;
+type timerirq_dev, dev_type;
+type tty_dev, dev_type;

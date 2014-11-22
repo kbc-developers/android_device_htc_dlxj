@@ -1,0 +1,2 @@
+allow tee self:process execmem;
+#FIXME allow tee system_data_file:file open;
