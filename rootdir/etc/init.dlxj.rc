@@ -493,11 +493,6 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
         user system
         group system camera inet graphics
 
-service qrngd /system/bin/qrngd -f
-   class main
-   user root
-   group root
-
 on property:ro.baseband="msm"
     # Enable BT-DUN only for all msms
     setprop ro.qualcomm.bluetooth.dun true    
