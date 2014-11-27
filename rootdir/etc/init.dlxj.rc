@@ -40,16 +40,13 @@ on init
     # connection tracking to treat them as INVALID packet
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
-   # For firmwares
-   mkdir /firmware 0771 system system
-   rm /vendor
-   mkdir /vendor 0771 system system
-   mkdir /vendor/firmware 0771 system system
-
-# on emmc mount the partition containing firmware
 on fs
    mkdir /devlog 0700 root root
    mkdir /reserve 0700 root root
+   mkdir /firmware 0771 system system
+   mkdir /firmware/mdm 0771 system system
+   mkdir /firmware/q6 0771 system system
+
    mount_all /fstab.dlxj
    setprop ro.crypto.fuse_sdcard true
 
@@ -60,11 +57,6 @@ on fs
    mkdir /tombstones/lpass 0771 system system
    mkdir /tombstones/dsps 0771 system system
 
-   # 8064 has only mdm, use radio partition for it.
-   mkdir /firmware/mdm 0771 system system
-   mount vfat /dev/block/mmcblk0p16 /firmware/mdm wait ro shortname=lower
-   exec /system/bin/sh /init.qcom.firmware_links.sh /firmware/mdm/image /vendor/firmware "*.mbn *.img"
-
    # Create symbolic links to mount points outside of /data for qcks
    mkdir /mnt/qcks 0700 root system
    symlink /mnt/qcks /data/qcks
@@ -74,10 +66,6 @@ on fs
    mkdir /mnt/efs 0700 root system
    symlink /mnt/efs /data/efs
    mount tmpfs tmpfs /mnt/efs size=20m,mode=0750,gid=1000
-
-   mkdir /firmware/q6 0771 system system
-   mount vfat /dev/block/mmcblk0p17 /firmware/q6 wait ro shortname=lower
-   exec /system/bin/sh /init.qcom.firmware_links.sh /firmware/q6 /vendor/firmware "q6.*"
 
    symlink /system/vendor/lib /vendor/lib
 

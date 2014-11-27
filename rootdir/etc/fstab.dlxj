@@ -11,6 +11,8 @@
 /dev/block/mmcblk0p21	/misc		emmc	defaults							defaults
 /dev/block/mmcblk0p24	/devlog		ext4	noatime,nosuid,nodev,data=ordered,noauto_da_alloc		wait
 /dev/block/mmcblk0p31	/reserve	vfat	defaults							defaults
+/dev/block/mmcblk0p16	/firmware/mdm	vfat	ro,shortname=lower						wait
+/dev/block/mmcblk0p17	/firmware/q6	vfat	ro,shortname=lower						wait
 
 # External SD card
 /devices/platform/msm_sdcc.3/mmc_host	auto		auto	defaults	voldmanaged=ext_sd:auto

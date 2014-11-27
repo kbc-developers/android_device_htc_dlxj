@@ -29,7 +29,6 @@ PRODUCT_COPY_FILES += device/htc/dlxj/gps/gps.conf:system/etc/gps.conf
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.dlxj \
-    init.qcom.firmware_links.sh \
     init.dlxj.rc \
     init.dlxj.usb.rc \
     ueventd.dlxj.rc
