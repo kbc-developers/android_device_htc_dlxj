@@ -83,7 +83,7 @@ COMMON_GLOBAL_CFLAGS += -DNEW_LIBRIL_HTC
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/htc/dlx/sepolicy
+BOARD_SEPOLICY_DIRS += device/htc/dlxj/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     akmd.te \
