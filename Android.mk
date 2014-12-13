@@ -30,7 +30,7 @@ $(MDM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "MDM firmware link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
-	$(hide) ln -sf /firmware/mdm/$(notdir $@) $@
+	$(hide) ln -sf /firmware/mdm/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(MDM_SYMLINKS)
 
