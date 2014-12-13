@@ -60,6 +60,7 @@ ro.telephony.default_network=10
 
 # Set CDMA SUBSCRIPTION SOURCE to RUIM in Database for this device
 ro.telephony.default_cdma_sub=0
+ro.telephony.get_imsi_from_sim=true
 
 # Device needs to get CDMA subscription when RUIM is ready
 ro.cdma.subscribe_on_ruim_ready = true
