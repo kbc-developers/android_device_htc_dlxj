@@ -97,7 +97,9 @@ BOARD_SEPOLICY_UNION += \
     mm-qcamerad.te \
     mpdecision.te \
     netmgrd.te \
+    property_contexts \
     qmuxd.te \
+    recovery.te \
     surfaceflinger.te \
     system_server.te \
     tee.te \
