@@ -22,8 +22,7 @@ include $(call all-subdir-makefiles,$(LOCAL_PATH))
 MDM_IMAGES := \
     acdb.mbn apps.mbn dsp1.mbn dsp2.mbn dsp3.mbn efs1.mbn efs2.mbn efs3.mbn \
     htccdma.mbn htccnv.mbn htcnvmfg.mbn htcrfnv.mbn htcssmem.mbn htcuserd.mbn \
-    libpn544_fw.so mdm_acdb.img q6.b00 q6.b01 q6.b03 q6.b04 q6.b05 q6.b06 q6.mdt \
-    rpm.mbn sbl1.mbn sbl2.mbn
+    mdm_acdb.img rpm.mbn sbl1.mbn sbl2.mbn \
 
 MDM_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(MDM_IMAGES)))
 $(MDM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
