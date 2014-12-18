@@ -2,17 +2,17 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-#<src>     		<mnt_point>	<type>	<mnt_flags>							<fs_mgr_flags>
-/dev/block/mmcblk0p19	/boot		emmc	recoveryonly							defaults
-/dev/block/mmcblk0p20	/recovery	emmc	recoveryonly							defaults
-/dev/block/mmcblk0p32	/system		ext4	ro,barrier=1							wait
-/dev/block/mmcblk0p34	/data		ext4	noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc	wait,check,encryptable=/dev/block/mmcblk0p29
-/dev/block/mmcblk0p33	/cache		ext4	noatime,nosuid,nodev,barrier=1,data=ordered			wait,check
-/dev/block/mmcblk0p21	/misc		emmc	defaults							defaults
-/dev/block/mmcblk0p24	/devlog		ext4	noatime,nosuid,nodev,data=ordered,noauto_da_alloc		wait
-/dev/block/mmcblk0p31	/reserve	vfat	defaults							defaults
-/dev/block/mmcblk0p16	/firmware/mdm	vfat	ro,shortname=lower						wait
-/dev/block/mmcblk0p17	/firmware/q6	vfat	ro,shortname=lower						wait
+#<src>     					<mnt_point>	<type>	<mnt_flags>							<fs_mgr_flags>
+/dev/block/platform/msm_sdcc.1/by-name/boot	/boot		emmc	recoveryonly							defaults
+/dev/block/platform/msm_sdcc.1/by-name/recovery	/recovery	emmc	recoveryonly							defaults
+/dev/block/platform/msm_sdcc.1/by-name/system	/system		ext4	ro,barrier=1							wait
+/dev/block/platform/msm_sdcc.1/by-name/userdata	/data		ext4	noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc	wait,check,encryptable=/dev/block/platform/msm_sdcc.1/by-name/extra
+/dev/block/platform/msm_sdcc.1/by-name/cache	/cache		ext4	noatime,nosuid,nodev,barrier=1,data=ordered			wait,check
+/dev/block/platform/msm_sdcc.1/by-name/misc	/misc		emmc	defaults							defaults
+/dev/block/platform/msm_sdcc.1/by-name/devlog	/devlog		ext4	noatime,nosuid,nodev,data=ordered,noauto_da_alloc		wait
+/dev/block/platform/msm_sdcc.1/by-name/reserve	/reserve	vfat	defaults							defaults
+/dev/block/platform/msm_sdcc.1/by-name/radio	/firmware/mdm	vfat	ro,shortname=lower						wait
+/dev/block/platform/msm_sdcc.1/by-name/adsp	/firmware/q6	vfat	ro,shortname=lower						wait
 
 # External SD card
 /devices/platform/msm_sdcc.3/mmc_host	auto		auto	defaults	voldmanaged=ext_sd:auto
