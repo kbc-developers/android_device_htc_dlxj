@@ -436,8 +436,6 @@ service hcheck /system/bin/hcheck
     user system
     group system
     oneshot
-    seclabel u:r:hcheck:s0
-
 # Widevine DRM end
 
 # OMA DRM change start
@@ -477,7 +475,6 @@ service akmd /system/bin/akmd
     	class main
     	user system compass
     	group system compass misc input
-        seclabel u:r:akmd:s0
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
         class late_start
