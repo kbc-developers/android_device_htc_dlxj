@@ -61,6 +61,7 @@ gsm.operator.numeric = 44050
 gsm.operator.iso-country = jp
 mobiledata.interfaces=rmnet0,rmnet1
 persist.eons.enabled=false
+persist.radio.apm_sim_not_pwdn=true
 persist.radio.snapshot_enabled=1
 persist.radio.snapshot_timer=22
 persist.rild.nitz_plmn=
