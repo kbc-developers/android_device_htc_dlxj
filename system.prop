@@ -109,6 +109,7 @@ persist.eons.enabled=false
 ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
 persist.sys.usb.config=mtp
 mm.enable.smoothstreaming=true
+qcom.hw.aac.encoder=true
 ro.input.noresample=1
 
 # CWMR Options
