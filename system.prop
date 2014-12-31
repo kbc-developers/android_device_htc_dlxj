@@ -1,14 +1,6 @@
-#
 # system.prop for dlxj
-#
-mobiledata.interfaces=rmnet0,rmnet1
-## For CDMA
-telephony.lteOnCdmaDevice=1
-telephony.rilV7NeedCDMALTEPhone=true
-## For GSM/WCDMA
-#telephony.lteOnGsmDevice=1
-#ro.telephony.ril.v3=subscriptionFromSource,skipCdmaSubcription
 
+# KDDI SMS
 ro.ril.vmail.44054=+819044440141
 ro.ril.vmail.44053=+819044440141
 ro.ril.vmail.44070=+819044440141
@@ -41,8 +33,36 @@ ro.ril.vmail.44150=+819044440141
 ro.ril.vmail.44151=+819044440141
 ro.ril.vmail.44170=+819044440141
 
-rild.libpath=/system/lib/libril-qc-qmi-1.so
-rild.libargs=-d /dev/smd0
+# Display
+debug.mdpcomp.maxlayer=3
+ro.hdmi.enable=true
+ro.hwui.text_cache_width=2048
+ro.opengles.version=196608
+ro.sf.lcd_density=480
+
+# GPS
+ro.gps.set_privacy=1
+
+# Media
+mm.enable.smoothstreaming=true
+qcom.hw.aac.encoder=true
+ro.input.noresample=1
+
+# Perf
+ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
+
+# Radio
+DEVICE_PROVISIONED=1
+gsm.sim.operator.alpha = KDDI
+gsm.sim.operator.numeric = 44050
+gsm.sim.operator.iso-country = jp
+gsm.operator.alpha = KDDI
+gsm.operator.numeric = 44050
+gsm.operator.iso-country = jp
+mobiledata.interfaces=rmnet0,rmnet1
+persist.eons.enabled=false
+persist.radio.snapshot_enabled=1
+persist.radio.snapshot_timer=22
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
@@ -52,66 +72,33 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
-ril.subscription.types=NV,RUIM
-DEVICE_PROVISIONED=1
-ro.ril.transmitpower=true
+rild.libargs=-d /dev/smd0
+rild.libpath=/system/lib/libril-qc-qmi-1.so
 ro.baseband.arch = mdm
-ro.telephony.default_network=10
-
-# Set CDMA SUBSCRIPTION SOURCE to RUIM in Database for this device
-ro.telephony.default_cdma_sub=0
-ro.telephony.get_imsi_from_sim=true
-
-# Device needs to get CDMA subscription when RUIM is ready
-ro.cdma.subscribe_on_ruim_ready = true
-
-# For GPS privacy lock
-ro.gps.set_privacy=1
-
-# system props for display
-ro.sf.lcd_density=480
-debug.mdpcomp.maxlayer=3
-
-ro.hdmi.enable=true
-
-#
-#Simulate sdcard on /data/media
-#
-persist.fuse_sdcard=true
-
-# Support HW reset
-ro.product.hwreset = 1
-
-ro.hwui.text_cache_width=2048
-ro.setupwizard.enable_bypass=1
-ro.com.google.locationfeatures=1
-ro.com.google.clientidbase.yt=android-htc
-ro.com.google.clientidbase.am=android-kddi-jp
-ro.com.google.clientidbase.gmm=android-htc
-ro.com.google.clientidbase.ms=android-kddi-jp
-gsm.sim.operator.alpha = KDDI
-gsm.sim.operator.numeric = 44050
-gsm.sim.operator.iso-country = jp
-gsm.operator.alpha = KDDI
-gsm.operator.numeric = 44050
-gsm.operator.iso-country = jp
 ro.cdma.home.operator.alpha = KDDI
 ro.cdma.home.operator.numeric = 44050
 ro.cdma.data_retry_config=max_retries=infinite,26000,52000,104000,208000,416000,832000,1664000,1800000
-ro.ril.set.mtusize=1420
-persist.radio.snapshot_enabled=1
-persist.radio.snapshot_timer=22
-ro.config.multimode_cdma=1
+ro.cdma.subscribe_on_ruim_ready = true
 ro.config.combined_signal=true
+ro.config.multimode_cdma=1
+ro.config.svlte1x=true
 ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000
-ro.opengles.version=196608
-persist.eons.enabled=false
-ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
-persist.sys.usb.config=mtp
-mm.enable.smoothstreaming=true
-qcom.hw.aac.encoder=true
-ro.input.noresample=1
+ro.ril.set.mtusize=1420
+ro.ril.svdo=true
+ro.ril.transmitpower=true
+ro.telephony.default_cdma_sub=0
+ro.telephony.default_network=10
+ro.telephony.get_imsi_from_sim=true
+telephony.lteOnCdmaDevice=1
 
-# CWMR Options
-ro.cwm.forbid_format=/devlog,/reserve
-ro.cwm.forbid_mount=/devlog,/reserve
+# USB
+persist.sys.usb.config=mtp
+
+###
+## For test ##
+###
+#telephony.rilV7NeedCDMALTEPhone=true
+
+## For GSM/WCDMA
+#telephony.lteOnGsmDevice=1
+#ro.telephony.ril.v3=subscriptionFromSource,skipCdmaSubcription
