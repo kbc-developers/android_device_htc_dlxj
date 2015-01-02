@@ -1,2 +1,2 @@
-allow mpdecision socket_device:dir add_name;
-allow mpdecision socket_device:sock_file { create setattr };
+type_transition mpdecision socket_device:sock_file mpctl_socket;
+type_transition mpdecision system_data_file:file mpctl_data_file;

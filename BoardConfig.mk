@@ -92,16 +92,19 @@ BOARD_SEPOLICY_UNION += \
     file_contexts \
     hcheck.te \
     init.te \
+    mdm_helper.te \
     mediaserver.te \
     mm-qcamerad.te \
     mpdecision.te \
     netmgrd.te \
     property_contexts \
     qmuxd.te \
+    radio.te \
     recovery.te \
     surfaceflinger.te \
     system_server.te \
     tee.te \
+    thermal-engine.te \
     thermald.te \
     vold.te \
     wpa.te
