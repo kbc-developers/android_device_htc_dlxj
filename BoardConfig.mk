@@ -46,7 +46,7 @@ BOARD_EGL_CFG := device/htc/dlxj/configs/egl.cfg
 #Kernel
 BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlxj androidboot.selinux=permissive user_debug=0
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlxj androidboot.selinux=permissive user_debug=0 androidboot.bootdevice=msm_sdcc.1
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01800000
 TARGET_KERNEL_CONFIG := cyanogenmod_deluxe_j_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/m7wlj
