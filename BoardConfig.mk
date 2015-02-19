@@ -91,6 +91,7 @@ BOARD_SEPOLICY_UNION += \
     drmserver.te \
     file_contexts \
     hcheck.te \
+    healthd.te \
     init.te \
     mdm_helper.te \
     mediaserver.te \
