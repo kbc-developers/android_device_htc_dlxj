@@ -89,6 +89,7 @@ BOARD_SEPOLICY_UNION += \
     akmd.te \
     device.te \
     drmserver.te \
+    felica.te \
     file_contexts \
     hcheck.te \
     healthd.te \

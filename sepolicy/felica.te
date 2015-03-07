@@ -1,0 +1,4 @@
+type felica_device, file_type;
+type felica_start_exec, file_type;
+type felica_daemon_exec, file_type;
+type felica_startup_exec, file_type;

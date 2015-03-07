@@ -16,3 +16,25 @@
 
 /data/system/default_values	u:object_r:mpctl_data_file:s0
 /data/mpdecision(/.*)		u:object_r:mpctl_data_file:s0
+
+# JPN Felica Temporary Workaround
+/dev/ttyHS1				u:object_r:nfc_device:s0
+/dev/snfc_auto_polling			u:object_r:nfc_device:s0
+/dev/snfc_cen				u:object_r:nfc_device:s0
+/dev/snfc_hsel				u:object_r:nfc_device:s0
+/dev/snfc_intu				u:object_r:nfc_device:s0
+/dev/snfc_intu_polling			u:object_r:nfc_device:s0
+/dev/snfc_pon				u:object_r:nfc_device:s0
+/dev/snfc_rfs				u:object_r:nfc_device:s0
+
+/dev/felica				u:object_r:felica_device:s0
+/dev/felica_cen				u:object_r:felica_device:s0
+/dev/felica_int				u:object_r:felica_device:s0
+/dev/felica_int_poll			u:object_r:felica_device:s0
+/dev/felica_rfs				u:object_r:felica_device:s0
+/dev/felica_rws				u:object_r:felica_device:s0
+/dev/felica_uid				u:object_r:felica_device:s0
+
+/system/bin/felica_start		u:object_r:felica_start_exec:s0
+/system/bin/felica_daemon		u:object_r:felica_daemon_exec:s0
+/system/bin/felica_startup		u:object_r:felica_startup_exec:s0
