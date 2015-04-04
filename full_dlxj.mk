@@ -33,10 +33,6 @@ PRODUCT_PACKAGES += \
     init.dlxj.usb.rc \
     ueventd.dlxj.rc
 
-# Post boot service
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/init.post_boot.sh:system/etc/init.post_boot.sh
-
 PRODUCT_PACKAGES += \
     battery_0.png \
     battery_1.png \
