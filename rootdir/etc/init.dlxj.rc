@@ -252,6 +252,10 @@ on post-fs-data
     chown system system /sys/devices/platform/msm_sdcc.3/polling
     chown system system /sys/devices/platform/msm_sdcc.4/polling
 
+    # PCC
+    chown system system /sys/devices/virtual/graphics/fb0/rgb
+    chmod 0660 /sys/devices/virtual/graphics/fb0/rgb
+
     #Create directory used by sensor subsystem(dsps)
     mkdir /data/system/sensors
     chmod 665 /data/system/sensors
