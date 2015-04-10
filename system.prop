@@ -79,7 +79,6 @@ ro.baseband.arch = mdm
 ro.cdma.home.operator.alpha = KDDI
 ro.cdma.home.operator.numeric = 44050
 ro.cdma.data_retry_config=max_retries=infinite,26000,52000,104000,208000,416000,832000,1664000,1800000
-ro.cdma.subscribe_on_ruim_ready = true
 ro.config.combined_signal=true
 ro.config.multimode_cdma=1
 ro.config.svlte1x=true
