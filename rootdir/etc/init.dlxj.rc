@@ -487,12 +487,6 @@ service netmgrd /system/bin/netmgrd
 
 #--SSD_RIL
 
-# bugreport is triggered by the KEY_VOL-UP and KEY_VOL-DOWN keycodes
-service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
-    disabled
-    oneshot
-    keycodes 114 115
-
 on property:dev.bootcomplete=1
     start mpdecision
 
