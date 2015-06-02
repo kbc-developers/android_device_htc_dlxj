@@ -84,9 +84,6 @@ ro.telephony.get_imsi_from_sim=true
 telephony.lteOnCdmaDevice=1
 ro.telephony.ril_class=DlxRIL
 
-# USB
-persist.sys.usb.config=mtp
-
 ###
 ## For test ##
 ###
