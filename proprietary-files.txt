@@ -174,3 +174,27 @@ vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/mediadrm/libwvdrmengine.so
+
+# amp configs
+etc/tfa/deftcoefA.speaker
+etc/tfa/deftcoefA_l.speaker
+etc/tfa/playback.config
+etc/tfa/playback.eq
+etc/tfa/playback.preset
+etc/tfa/playback_l.config
+etc/tfa/playback_l.eq
+etc/tfa/playback_l.preset
+etc/tfa/ring.config
+etc/tfa/ring.eq
+etc/tfa/ring.preset
+etc/tfa/ring_l.config
+etc/tfa/ring_l.eq
+etc/tfa/ring_l.preset
+etc/tfa/tfa9887.patch
+etc/tfa/tfa9887_l.patch
+etc/tfa/voice.config
+etc/tfa/voice.eq
+etc/tfa/voice.preset
+etc/tfa/voice_l.config
+etc/tfa/voice_l.eq
+etc/tfa/voice_l.preset
