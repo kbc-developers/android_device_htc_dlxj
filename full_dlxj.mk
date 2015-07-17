@@ -109,6 +109,10 @@ PRODUCT_COPY_FILES += \
     device/htc/dlxj/idc/projector_input.idc:system/usr/idc/projector_input.idc \
     device/htc/dlxj/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
+# Art
+PRODUCT_PROPERTY_OVERRIDES += \
+	dalvik.vm.dex2oat-swap=false
+
 # Audio
 PRODUCT_PACKAGES += \
 	audio_amplifier.msm8960
