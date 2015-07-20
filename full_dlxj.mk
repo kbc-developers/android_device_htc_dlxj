@@ -47,9 +47,9 @@ PRODUCT_PACKAGES += \
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
-    NFCEE_ACCESS_PATH := device/htc/dlx/configs/nfcee_access.xml
+    NFCEE_ACCESS_PATH := device/htc/dlxj/configs/nfcee_access.xml
 else
-    NFCEE_ACCESS_PATH := device/htc/dlx/configs/nfcee_access_debug.xml
+    NFCEE_ACCESS_PATH := device/htc/dlxj/configs/nfcee_access_debug.xml
 endif
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
