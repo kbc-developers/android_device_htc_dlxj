@@ -112,7 +112,9 @@ BOARD_SEPOLICY_UNION += \
     thermal-engine.te \
     thermald.te \
     vold.te \
-    wpa.te
+    wpa.te \
+    felica.te \
+    snfc.te
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file

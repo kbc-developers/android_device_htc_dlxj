@@ -4,3 +4,5 @@ type prox_dev, dev_type;
 type rfkill_dev, dev_type;
 type timerirq_dev, dev_type;
 type tty_dev, dev_type;
+type felica_device, dev_type;
+type nfcfelica_device, dev_type;
