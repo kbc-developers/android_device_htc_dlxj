@@ -79,9 +79,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/dlxj/bluetooth/include
 BOARD_BLUEDROID_VENDOR_CONF := device/htc/dlxj/bluetooth/vnd_dlxj.txt
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 
-# Use libril in the device tree
+# Radio
 BOARD_PROVIDES_LIBRIL := true
-COMMON_GLOBAL_CFLAGS += -DNEW_LIBRIL_HTC
+BOARD_RIL_CLASS := ../../../device/htc/dlxj/ril
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
