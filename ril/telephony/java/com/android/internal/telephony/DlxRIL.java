@@ -19,23 +19,7 @@
 
 package com.android.internal.telephony;
 
-import static com.android.internal.telephony.RILConstants.*;
-
 import android.content.Context;
-import android.media.AudioManager;
-import android.os.AsyncResult;
-import android.os.Message;
-import android.os.Parcel;
-import android.telephony.PhoneNumberUtils;
-import android.telephony.Rlog;
-import android.telephony.SignalStrength;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-
-import com.android.internal.telephony.uicc.IccCardApplicationStatus;
-import com.android.internal.telephony.uicc.IccCardStatus;
 
 /**
  * RIL customization for HTC DLX
