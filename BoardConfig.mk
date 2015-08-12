@@ -40,9 +40,6 @@ TARGET_OTA_ASSERT_DEVICE := dlxj
 TARGET_BOOTLOADER_BOARD_NAME := dlxj
 BOARD_HAS_LARGE_FILESYSTEM := true
 
-# Adreno configuration
-BOARD_EGL_CFG := device/htc/dlxj/configs/egl.cfg
-
 #Kernel
 BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_PAGESIZE := 2048
