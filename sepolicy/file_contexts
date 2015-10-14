@@ -23,4 +23,3 @@
 # SNFC
 /dev/snfc(.*)			u:object_r:nfc_device:s0
 
-/sys/devices/virtual/graphics/fb0/rgb	u:object_r:display_sysfs:s0

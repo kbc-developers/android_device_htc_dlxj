@@ -17,6 +17,8 @@
 #ifndef _TFA9887_H_
 #define _TFA9887_H_
 
+#include <stdint.h>
+
 #define TFA9887_DEVICE "/dev/tfa9887"
 #define TFA9887L_DEVICE "/dev/tfa9887l"
 
@@ -33,6 +35,15 @@
 #define MAX_PATCH_SIZE 3072
 #define MAX_PARAM_SIZE 768
 
+typedef struct uint24 {
+    uint8_t bytes[3];
+} uint24_t;
+
+#define MAX_EQ_ITEM_SIZE (sizeof(uint24_t))
+#define MAX_EQ_LINE_SIZE 6
+#define MAX_EQ_LINES 10
+#define MAX_EQ_SIZE (MAX_EQ_ITEM_SIZE * MAX_EQ_LINE_SIZE * MAX_EQ_LINES)
+
 #define PATCH_R "/system/etc/tfa/tfa9887.patch"
 #define PATCH_L "/system/etc/tfa/tfa9887_l.patch"
 #define SPKR_R "/system/etc/tfa/deftcoefA.speaker"
@@ -44,6 +55,8 @@
 #define CONFIG_RING_L "/system/etc/tfa/ring_l.config"
 #define CONFIG_VOICE_R "/system/etc/tfa/voice.config"
 #define CONFIG_VOICE_L "/system/etc/tfa/voice_l.config"
+#define CONFIG_VOIP_R "/system/etc/tfa/voip.config"
+#define CONFIG_VOIP_L "/system/etc/tfa/voip_l.config"
 
 #define PRESET_PLAYBACK_R "/system/etc/tfa/playback.preset"
 #define PRESET_PLAYBACK_L "/system/etc/tfa/playback_l.preset"
@@ -51,6 +64,8 @@
 #define PRESET_RING_L "/system/etc/tfa/ring_l.preset"
 #define PRESET_VOICE_R "/system/etc/tfa/voice.preset"
 #define PRESET_VOICE_L "/system/etc/tfa/voice_l.preset"
+#define PRESET_VOIP_R "/system/etc/tfa/voip.preset"
+#define PRESET_VOIP_L "/system/etc/tfa/voip_l.preset"
 
 #define EQ_PLAYBACK_R "/system/etc/tfa/playback.eq"
 #define EQ_PLAYBACK_L "/system/etc/tfa/playback_l.eq"
@@ -58,6 +73,8 @@
 #define EQ_RING_L "/system/etc/tfa/ring_l.eq"
 #define EQ_VOICE_R "/system/etc/tfa/voice.eq"
 #define EQ_VOICE_L "/system/etc/tfa/voice_l.eq"
+#define EQ_VOIP_R "/system/etc/tfa/voip.eq"
+#define EQ_VOIP_L "/system/etc/tfa/voip_l.eq"
 
 struct mode_config_t {
     const char *config;
@@ -69,6 +86,7 @@ enum {
     TFA9887_MODE_PLAYBACK = 0,
     TFA9887_MODE_RING,
     TFA9887_MODE_VOICE,
+    TFA9887_MODE_VOIP,
     TFA9887_MODE_MAX,
 };
 
@@ -89,6 +107,7 @@ enum {
 struct tfa9887_amp_t {
     int fd;
     bool is_right;
+    bool is_on;
     uint32_t mode;
     bool initializing;
     bool writing;
@@ -205,6 +224,7 @@ struct tfa9887_amp_t {
 #define I2S_MIXER_CTL "MI2S_RX Audio Mixer MultiMedia1"
 
 int tfa9887_open(void);
+int tfa9887_power(bool on);
 int tfa9887_set_mode(audio_mode_t mode);
 int tfa9887_close(void);
 

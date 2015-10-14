@@ -40,13 +40,10 @@ TARGET_OTA_ASSERT_DEVICE := dlxj
 TARGET_BOOTLOADER_BOARD_NAME := dlxj
 BOARD_HAS_LARGE_FILESYSTEM := true
 
-# Adreno configuration
-BOARD_EGL_CFG := device/htc/dlxj/configs/egl.cfg
-
 #Kernel
 BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=dlxj androidboot.selinux=permissive user_debug=0 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=dlxj androidboot.selinux=permissive user_debug=0 androidboot.bootdevice=msm_sdcc.1
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01800000
 TARGET_KERNEL_CONFIG := cyanogenmod_deluxe_j_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/m7wlj
@@ -67,7 +64,8 @@ COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
 TARGET_RELEASE_CPPFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # CMHW
-BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
+BOARD_USES_CYANOGEN_HARDWARE := true
+BOARD_HARDWARE_CLASS += hardware/cyanogen/cmhw
 
 # Graphics
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
@@ -79,9 +77,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/dlxj/bluetooth/include
 BOARD_BLUEDROID_VENDOR_CONF := device/htc/dlxj/bluetooth/vnd_dlxj.txt
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 
-# Use libril in the device tree
+# Radio
 BOARD_PROVIDES_LIBRIL := true
-COMMON_GLOBAL_CFLAGS += -DNEW_LIBRIL_HTC
+BOARD_RIL_CLASS := ../../../device/htc/dlxj/ril
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
@@ -93,7 +91,6 @@ BOARD_SEPOLICY_UNION += \
     drmserver.te \
     felica.te \
     file_contexts \
-    file.te \
     hcheck.te \
     healthd.te \
     init.te \

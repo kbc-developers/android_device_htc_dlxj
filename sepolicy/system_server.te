@@ -1,4 +1,3 @@
-allow system_server display_sysfs:file rw_file_perms;
 allow system_server lightsensor_dev:chr_file r_file_perms;
 allow system_server prox_dev:chr_file rw_file_perms;
 allow system_server timerirq_dev:chr_file rw_file_perms;

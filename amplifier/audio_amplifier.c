@@ -36,7 +36,6 @@
 
 typedef struct dlx_device {
     amplifier_device_t amp_dev;
-    uint32_t current_output_devices;
     audio_mode_t current_mode;
 } dlx_device_t;
 
@@ -56,24 +55,25 @@ static int amp_set_output_devices(amplifier_device_t *device, uint32_t devices)
 {
     dlx_device_t *dev = (dlx_device_t *) device;
 
-    dev->current_output_devices = devices;
-
-    if ((dev->current_output_devices & DEVICE_OUT_WIRED_HEADSET) ||
-            (dev->current_output_devices & DEVICE_OUT_WIRED_HEADPHONE)) {
+    if ((devices & DEVICE_OUT_WIRED_HEADSET) ||
+            (devices & DEVICE_OUT_WIRED_HEADPHONE)) {
         rt5501_set_mode(dev->current_mode);
     }
 
     return 0;
 }
 
-static int amp_output_stream_start(amplifier_device_t *device,
-        UNUSED struct audio_stream_out *stream, UNUSED bool offload)
+static int amp_enable_output_devices(amplifier_device_t *device,
+        uint32_t devices, bool enable)
 {
     dlx_device_t *dev = (dlx_device_t *) device;
 
-    if (dev->current_output_devices & DEVICE_OUT_SPEAKER) {
-        /* TFA9887 requires I2S to be active in order to change mode */
-        tfa9887_set_mode(dev->current_mode);
+    if (devices & DEVICE_OUT_SPEAKER) {
+        tfa9887_power(enable);
+        if (enable) {
+            /* FIXME: This may fail because I2S is not active */
+            tfa9887_set_mode(dev->current_mode);
+        }
     }
 
     return 0;
@@ -83,6 +83,7 @@ static int amp_dev_close(hw_device_t *device)
 {
     dlx_device_t *dev = (dlx_device_t *) device;
 
+    tfa9887_power(false);
     tfa9887_close();
 
     free(dev);
@@ -113,13 +114,14 @@ static int amp_module_open(const hw_module_t *module, UNUSED const char *name,
 
     dlx_dev->amp_dev.set_input_devices = NULL;
     dlx_dev->amp_dev.set_output_devices = amp_set_output_devices;
+    dlx_dev->amp_dev.enable_input_devices = NULL;
+    dlx_dev->amp_dev.enable_output_devices = amp_enable_output_devices;
     dlx_dev->amp_dev.set_mode = amp_set_mode;
-    dlx_dev->amp_dev.output_stream_start = amp_output_stream_start;
+    dlx_dev->amp_dev.output_stream_start = NULL;
     dlx_dev->amp_dev.input_stream_start = NULL;
     dlx_dev->amp_dev.output_stream_standby = NULL;
     dlx_dev->amp_dev.input_stream_standby = NULL;
 
-    dlx_dev->current_output_devices = 0;
     dlx_dev->current_mode = AUDIO_MODE_NORMAL;
 
     *device = (hw_device_t *) dlx_dev;
