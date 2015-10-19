@@ -125,6 +125,10 @@ PRODUCT_PACKAGES += \
         libgps.utils \
         gps.msm8960
 
+# HTC Symbols
+PRODUCT_PACKAGES += \
+        libhtc_symbols
+
 # NFC
 #PRODUCT_PACKAGES += \
 #    nfc.msm8960 \
