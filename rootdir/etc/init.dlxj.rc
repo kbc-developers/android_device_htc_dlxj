@@ -7,7 +7,7 @@ on early-init
     write /sys/block/mmcblk0/queue/scheduler noop
 
 on init
-    export LD_PRELOAD /system/lib/libhtc_symbols.so
+    export LD_PRELOAD /system/lib/libhtc_symbols.so:/system/lib/libboringssl-compat.so
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
