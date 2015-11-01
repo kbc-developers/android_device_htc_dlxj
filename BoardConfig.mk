@@ -32,6 +32,7 @@ TARGET_SPECIFIC_HEADER_PATH += device/htc/dlxj/include
 # Flags
 TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
+USE_CLANG_PLATFORM_BUILD := true
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := dlxj
