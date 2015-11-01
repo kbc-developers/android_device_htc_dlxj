@@ -1,4 +1,0 @@
-allow thermal-engine mpctl_socket:sock_file write;
-allow thermal-engine self:capability net_admin;
-allow thermal-engine self:netlink_kobject_uevent_socket { bind read setopt };
-allow thermal-engine mpdecision:unix_stream_socket connectto;

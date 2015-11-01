@@ -60,9 +60,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
 
 
-# QC thernald config
-PRODUCT_COPY_FILES += device/htc/dlxj/configs/thermald.conf:/system/etc/thermald.conf
-
 # Media configs
 PRODUCT_COPY_FILES += device/htc/dlxj/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 PRODUCT_COPY_FILES += device/htc/dlxj/configs/AudioBTIDnew.csv:system/etc/AudioBTIDnew.csv

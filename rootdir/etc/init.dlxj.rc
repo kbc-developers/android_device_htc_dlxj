@@ -272,11 +272,6 @@ on property:ro.devicerev=0
     write /sys/kernel/debug/pm8921-dbg/addr 0x10b
     write /sys/kernel/debug/pm8921-dbg/data 0x22
 
-service thermald /system/bin/thermald
-	class core
-	user root
-	group root
-
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
 	class core
 	user root
@@ -403,7 +398,6 @@ on property:sys.boot_completed=1
     chown system /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
     chown system /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq
     chown system /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
-    write /sys/module/msm_thermal/core_control/enabled 1
     chown root.system /sys/devices/system/cpu/mfreq
     chmod 220 /sys/devices/system/cpu/mfreq
     chown root.system /sys/devices/system/cpu/cpu1/online
@@ -536,7 +530,6 @@ on property:service.adb.root=1
 # Powersave
 on property:sys.perf.profile=0
     stop mpdecision
-    stop thermald
     write /sys/devices/system/cpu/cpu1/online 1
     write /sys/devices/system/cpu/cpu2/online 1
     write /sys/devices/system/cpu/cpu3/online 1
@@ -546,12 +539,10 @@ on property:sys.perf.profile=0
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor conservative
     write /sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor ondemand
     start mpdecision
-    start thermald
 
 # Balanced
 on property:sys.perf.profile=1
     stop mpdecision
-    stop thermald
     write /sys/devices/system/cpu/cpu1/online 1
     write /sys/devices/system/cpu/cpu2/online 1
     write /sys/devices/system/cpu/cpu3/online 1
@@ -560,12 +551,10 @@ on property:sys.perf.profile=1
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor interactive
     start mpdecision
-    start thermald
 
 # High performance
 on property:sys.perf.profile=2
     stop mpdecision
-    stop thermald
     write /sys/devices/system/cpu/cpu0/online 1
     write /sys/devices/system/cpu/cpu1/online 1
     write /sys/devices/system/cpu/cpu2/online 1

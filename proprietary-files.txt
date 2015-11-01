@@ -44,7 +44,6 @@ bin/pnpmgr
 bin/qmuxd
 bin/qcks
 bin/netmgrd
-bin/thermald
 bin/mpdecision
 bin/radish
 lib/libmmcamera_interface2.so
