@@ -19,7 +19,3 @@ $(call inherit-product-if-exists, vendor/htc/dlxj/dlxj-vendor.mk)
 
 # Inherit from msm8960-common
 $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
-
-# Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml

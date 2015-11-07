@@ -125,10 +125,6 @@ PRODUCT_PACKAGES += \
         libgps.utils \
         gps.msm8960
 
-# IR
-PRODUCT_PACKAGES += \
-    CIRModule
-
 # NFC
 #PRODUCT_PACKAGES += \
 #    nfc.msm8960 \
