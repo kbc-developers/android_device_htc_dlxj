@@ -113,7 +113,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-	camera.msm8960
+	camera.msm8960 \
+	libshim_camera
 
 # GPS
 PRODUCT_PACKAGES += \
