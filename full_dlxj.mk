@@ -151,6 +151,10 @@ PRODUCT_PACKAGES += \
 	MobileFeliCaSettingApp \
 	MobileFeliCaWebPluginBoot
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_qcopt
+
 # SSL Compat
 PRODUCT_PACKAGES += \
     libboringssl-compat
