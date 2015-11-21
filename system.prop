@@ -77,6 +77,7 @@ ro.config.svlte1x=true
 ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000
 ro.ril.set.mtusize=1420
 ro.ril.svdo=true
+ro.ril.telephony.mqanelements=5
 ro.ril.transmitpower=true
 ro.telephony.default_cdma_sub=0
 ro.telephony.default_network=10
