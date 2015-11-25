@@ -11,7 +11,6 @@
 /dev/block/platform/msm_sdcc.1/by-name/cache	/cache		f2fs	rw,nosuid,nodev,noatime,nodiratime,inline_xattr			wait,check,formattable
 /dev/block/platform/msm_sdcc.1/by-name/cache	/cache		ext4	noatime,nosuid,nodev,barrier=1,data=ordered			wait,check,formattable
 /dev/block/platform/msm_sdcc.1/by-name/misc	/misc		emmc	defaults							defaults
-/dev/block/platform/msm_sdcc.1/by-name/devlog	/devlog		ext4	noatime,nosuid,nodev,data=ordered,noauto_da_alloc		wait
 /dev/block/platform/msm_sdcc.1/by-name/reserve	/reserve	vfat	defaults							defaults
 /dev/block/platform/msm_sdcc.1/by-name/radio	/firmware/mdm	vfat	ro,shortname=lower,context=u:object_r:firmware_file:s0		wait
 /dev/block/platform/msm_sdcc.1/by-name/adsp	/firmware/q6	vfat	ro,shortname=lower,context=u:object_r:firmware_file:s0		wait
