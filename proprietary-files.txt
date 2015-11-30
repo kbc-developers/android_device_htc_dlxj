@@ -36,7 +36,6 @@ bin/akmd
 bin/bridgemgrd
 bin/ks
 bin/charging
-bin/mm-pp-daemon
 bin/mm-qcamera-daemon
 bin/qmiproxy
 bin/efsks
@@ -73,7 +72,6 @@ lib/libcsd-client.so
 lib/libril-qc-qmi-1.so
 vendor/lib/libqc-opt.so
 lib/libchromatix_imx135_hdr.so
-lib/libmm-abl.so
 lib/hw/sensors.dlx.so
 lib/libmmstillomx.so
 lib/libchromatix_vd6869_video_hdr.so
@@ -81,7 +79,6 @@ lib/libchromatix_imx175_hdr.so
 lib/libmmcamera_wavelet_lib.so
 lib/libchromatix_imx135_preview.so
 lib/libnetmgr.so
-lib/libmm-abl-oem.so
 lib/libHTC_DIS.so
 lib/liboemcamera.so
 lib/libimage-omx-common.so
