@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+#set -e
 export DEVICE=dlxj
 export VENDOR=htc
 
@@ -24,7 +24,6 @@ BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*
 
 for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
-  echo "Extracting /system/$FILE ..."
   OLDIFS=$IFS IFS=":" PARSING_ARRAY=($FILE) IFS=$OLDIFS
   FILE=`echo ${PARSING_ARRAY[0]} | sed -e "s/^-//g"`
   DEST=${PARSING_ARRAY[1]}
@@ -32,23 +31,22 @@ for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
   then
     DEST=$FILE
   fi
-  DIR=`dirname $FILE`
+  DIR=`dirname $DEST`
   if [ ! -d $BASE/$DIR ]; then
     mkdir -p $BASE/$DIR
   fi
+  # Try CM target first
   if [ "$SRC" = "adb" ]; then
-    adb pull /system/$FILE $BASE/$DEST
-  # if file dot not exist try destination
-    if [ "$?" != "0" ]
-        then
-        adb pull /system/$DEST $BASE/$DEST
+    adb pull /system/$DEST $BASE/$DEST
+    # if file does not exist try OEM target
+    if [ "$?" != "0" ]; then
+        adb pull /system/$FILE $BASE/$DEST
     fi
   else
-    cp $SRC/system/$FILE $BASE/$DEST
-    # if file dot not exist try destination
-    if [ "$?" != "0" ]
-        then
+    if [ -r $SRC/system/$DEST ]; then
         cp $SRC/system/$DEST $BASE/$DEST
+    else
+        cp $SRC/system/$FILE $BASE/$DEST
     fi
   fi
 done
