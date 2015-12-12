@@ -7,7 +7,7 @@ on early-init
     write /sys/block/mmcblk0/queue/scheduler noop
 
 on init
-    export LD_SHIM_LIBS /system/vendor/lib/libqc-opt.so|libshim_qcopt.so:/system/lib/hw/camera.vendor.msm8960.so|libshim_camera.so:/system/lib/liblog.so|libshim_log.so
+    export LD_SHIM_LIBS /system/vendor/lib/libqc-opt.so|libshim_qcopt.so:/system/lib/hw/camera.vendor.msm8960.so|libshim_camera.so:/system/lib/hw/sensors.dlx.so|libshim_sensors.so:/system/lib/liblog.so|libshim_log.so
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
