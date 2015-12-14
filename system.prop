@@ -82,6 +82,7 @@ ro.ril.transmitpower=true
 ro.telephony.default_cdma_sub=0
 ro.telephony.default_network=10
 ro.telephony.get_imsi_from_sim=true
+ro.telephony.ril_class=DLXRIL
 telephony.lteOnCdmaDevice=1
 ###
 ## For test ##

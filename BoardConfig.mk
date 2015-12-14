@@ -82,6 +82,7 @@ BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 
 # Radio
 BOARD_PROVIDES_LIBRIL := true
+BOARD_RIL_CLASS := ../../../device/htc/dlx/ril
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
