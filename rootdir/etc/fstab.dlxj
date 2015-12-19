@@ -16,7 +16,7 @@
 /dev/block/platform/msm_sdcc.1/by-name/adsp	/firmware/q6	vfat	ro,shortname=lower,context=u:object_r:firmware_file:s0		wait
 
 # External SD card
-/devices/platform/msm_sdcc.3/mmc_host*	auto		auto	defaults	voldmanaged=ext_sd:auto,encryptable=userdata
+/devices/platform/msm_sdcc.3/mmc_host*	auto		auto	defaults	voldmanaged=sdcard1:auto,encryptable=userdata
 
 # USB storage
 /devices/platform/msm_hsusb_host/usb*   auto    auto    defaults           voldmanaged=usbdisk:auto,noemulatedsd
