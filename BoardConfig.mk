@@ -27,7 +27,7 @@
 # inherit from common msm8960
 include device/htc/msm8960-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/htc/dlxj/include
+TARGET_SPECIFIC_HEADER_PATH += device/htc/dlxj/include
 
 # Flags
 TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
