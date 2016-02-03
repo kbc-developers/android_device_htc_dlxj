@@ -18,7 +18,6 @@ vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libGLESv2S3D_adreno.so
-vendor/lib/egl/libplayback_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libC2D2.so
@@ -49,6 +48,7 @@ lib/libmmcamera_interface2.so
 lib/libchromatix_vd6869_hdr.so
 lib/libril-qcril-hook-oem.so
 lib/hw/camera.vendor.msm8960.so
+lib/libwriteback.so
 lib/libdiag.so
 lib/libmmcamera_hdr_lib.so
 lib/libchromatix_ov2722_hdr.so
@@ -116,7 +116,6 @@ lib/libchromatix_ov2722_default_video.so
 lib/libqmi.so
 lib/libcamerapp.so
 lib/libchromatix_vd6869_default_video.so
-lib/libmmcamera_aec.so
 lib/libchromatix_imx175_preview.so
 lib/libchromatix_imx135_default_video.so
 lib/libgeofence.so
