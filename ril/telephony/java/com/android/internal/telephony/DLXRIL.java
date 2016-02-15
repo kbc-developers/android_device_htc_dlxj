@@ -16,9 +16,12 @@
 
 package com.android.internal.telephony;
 
+import static com.android.internal.telephony.RILConstants.*;
+
 import android.content.Context;
 import android.os.AsyncResult;
 import android.os.Message;
+import android.telephony.Rlog;
 
 /**
  * RIL customization for DLX
@@ -37,12 +40,14 @@ public class DLXRIL extends RIL {
     }
 
     @Override
-    public void getRadioCapability(Message response) {
-        riljLog("getRadioCapability: returning static radio capability");
-        if (response != null) {
-            Object ret = makeStaticRadioCapability();
-            AsyncResult.forMessage(response, ret, null);
-            response.sendToTarget();
+    protected void
+    send(RILRequest rr) {
+        if (rr.mRequest >= 109) {
+            Rlog.v(RILJ_LOG_TAG, "dlxril: received unsupported request " + rr.mRequest);
+            rr.onError(REQUEST_NOT_SUPPORTED, null);
+            rr.release();
+        } else {
+            super.send(rr);
         }
     }
 }
