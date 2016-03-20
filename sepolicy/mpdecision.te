@@ -1,2 +1,0 @@
-type_transition mpdecision socket_device:sock_file mpctl_socket;
-type_transition mpdecision system_data_file:file mpctl_data_file;
