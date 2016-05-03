@@ -60,8 +60,8 @@ PRODUCT_COPY_FILES += device/htc/dlxj/configs/AudioBTIDnew.csv:system/etc/AudioB
 
 # wifi config
 PRODUCT_COPY_FILES += \
-    device/htc/dlxj/configs/calibration:/system/etc/calibration \
-    device/htc/dlxj/configs/calibration.gpio4:/system/etc/calibration.gpio4
+    device/htc/dlxj/configs/calibration:system/etc/calibration \
+    device/htc/dlxj/configs/calibration.gpio4:system/etc/calibration.gpio4
 
 # Audio config
 PRODUCT_COPY_FILES += \
@@ -78,7 +78,7 @@ PRODUCT_COPY_FILES += \
     device/htc/dlxj/dsp/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg
 
 PRODUCT_COPY_FILES += \
-    device/htc/dlxj/dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3:/system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3
+    device/htc/dlxj/dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3
 
 # Wifi
 PRODUCT_COPY_FILES += \
