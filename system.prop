@@ -100,3 +100,5 @@ telephony.lteOnCdmaDevice=1
 ## For GSM/WCDMA
 #telephony.lteOnGsmDevice=1
 #ro.telephony.ril.v3=subscriptionFromSource,skipCdmaSubcription
+
+ro.sys.sdcardfs=true
