@@ -49,7 +49,6 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01800000
 TARGET_KERNEL_CONFIG := cyanogenmod_deluxe_j_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/m7wlj
 TARGET_KERNEL_HAVE_EXFAT := true
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Audio
 BOARD_USES_FLUENCE_INCALL := true
