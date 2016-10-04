@@ -36,6 +36,9 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
 # Assert
 TARGET_OTA_ASSERT_DEVICE := dlxj
 
+# Bionic
+TARGET_NEEDS_TEXT_RELOCATIONS := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := dlxj
 BOARD_HAS_LARGE_FILESYSTEM := true
