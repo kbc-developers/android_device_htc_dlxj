@@ -14,7 +14,9 @@ LOCAL_SRC_FILES := \
      SharedBuffer.cpp \
      VectorImpl.cpp
 
-LOCAL_C_INCLUDES += external/safe-iop/include
+LOCAL_C_INCLUDES += \
+     external/safe-iop/include \
+     system/core/libutils
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware libui libgui libbinder libutils libsync libshim_sensors
 
@@ -59,7 +61,10 @@ LOCAL_SRC_FILES := \
      SharedBuffer.cpp \
      VectorImpl.cpp
 
-LOCAL_C_INCLUDES += external/safe-iop/include
+LOCAL_C_INCLUDES += \
+     external/safe-iop/include \
+     system/core/libutils
+
 LOCAL_SHARED_LIBRARIES := liblog
 
 LOCAL_MODULE := libshim_sensors
