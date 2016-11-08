@@ -120,3 +120,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := device/htc/dlxj/rootdir/etc/fstab.dlxj
+
+# SDClang
+TARGET_USE_SDCLANG := true
