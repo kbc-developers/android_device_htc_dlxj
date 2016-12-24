@@ -14,7 +14,9 @@ LOCAL_SRC_FILES := \
      SharedBuffer.cpp \
      VectorImpl.cpp
 
-LOCAL_C_INCLUDES += external/safe-iop/include
+LOCAL_C_INCLUDES += \
+     external/safe-iop/include \
+     system/core/libutils
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware libui libgui libbinder libutils libsync libshim_sensors
 
@@ -59,10 +61,26 @@ LOCAL_SRC_FILES := \
      SharedBuffer.cpp \
      VectorImpl.cpp
 
-LOCAL_C_INCLUDES += external/safe-iop/include
+LOCAL_C_INCLUDES += \
+     external/safe-iop/include \
+     system/core/libutils
+
 LOCAL_SHARED_LIBRARIES := liblog
 
 LOCAL_MODULE := libshim_sensors
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+# Widevine
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+    wvm_shim.cpp
+
+LOCAL_SHARED_LIBRARIES := libstagefright_foundation
+LOCAL_MODULE := libshim_wvm
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)

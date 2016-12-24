@@ -156,7 +156,8 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libshim_log \
-    libshim_qcopt
+    libshim_qcopt \
+    libshim_wvm
 
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise

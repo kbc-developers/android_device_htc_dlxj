@@ -41,6 +41,10 @@ persist.audio.speaker.location=high
 qcom.hw.aac.encoder=true
 ro.qc.sdk.audio.fluencetype=fluence
 
+# Camera
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
+
 # Display
 debug.mdpcomp.maxlayer=3
 ro.hdmi.enable=true
@@ -90,7 +94,6 @@ ro.ril.transmitpower=true
 ro.telephony.default_cdma_sub=0
 ro.telephony.default_network=10
 ro.telephony.get_imsi_from_sim=true
-ro.telephony.ril_class=DLXRIL
 telephony.lteOnCdmaDevice=1
 ###
 ## For test ##
@@ -100,3 +103,5 @@ telephony.lteOnCdmaDevice=1
 ## For GSM/WCDMA
 #telephony.lteOnGsmDevice=1
 #ro.telephony.ril.v3=subscriptionFromSource,skipCdmaSubcription
+
+ro.sys.sdcardfs=true

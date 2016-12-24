@@ -29,10 +29,6 @@ include device/htc/msm8960-common/BoardConfigCommon.mk
 
 TARGET_SPECIFIC_HEADER_PATH += device/htc/dlxj/include
 
-# Flags
-TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
-
 # Assert
 TARGET_OTA_ASSERT_DEVICE := dlxj
 
@@ -46,28 +42,33 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 #Kernel
 BOARD_KERNEL_BASE := 0x80600000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=dlxj androidboot.selinux=permissive user_debug=0
+BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=dlxj user_debug=0
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01800000
 TARGET_KERNEL_CONFIG := cyanogenmod_deluxe_j_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/m7wlj
 TARGET_KERNEL_HAVE_EXFAT := true
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Audio
 BOARD_USES_FLUENCE_INCALL := true
-BOARD_USES_LEGACY_ALSA_AUDIO := true
 BOARD_USES_SEPERATED_AUDIO_INPUT := true
 BOARD_USES_SEPERATED_VOICE_SPEAKER := true
 BOARD_USES_SEPERATED_VOIP := true
 BOARD_HAVE_HTC_CSDCLIENT := true
+USE_CUSTOM_AUDIO_POLICY := 1
+
+# Boot animation
+TARGET_BOOTANIMATION_MULTITHREAD_DECODE := true
 
 # Camera
 USE_CAMERA_STUB := false
 TARGET_PROVIDES_CAMERA_HAL := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_NEEDS_MEMORYHEAPPMEM := true
-COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
 TARGET_RELEASE_CPPFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+BOARD_GLOBAL_CFLAGS += -DMETADATA_CAMERA_SOURCE
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
@@ -80,16 +81,8 @@ HAVE_ADRENO_SOURCE := false
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/dlxj/bluetooth/include
-BOARD_BLUEDROID_VENDOR_CONF := device/htc/dlxj/bluetooth/vnd_dlxj.txt
+BOARD_CUSTOM_BT_CONFIG := device/htc/dlxj/bluetooth/vnd_dlxj.txt
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
-
-# Radio
-BOARD_PROVIDES_LIBRIL := true
-BOARD_RIL_CLASS := ../../../device/htc/dlxj/ril
-
-# SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/htc/dlxj/sepolicy
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
@@ -130,3 +123,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := device/htc/dlxj/rootdir/etc/fstab.dlxj
+
+# SDClang
+TARGET_USE_SDCLANG := true

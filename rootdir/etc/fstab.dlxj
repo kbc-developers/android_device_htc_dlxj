@@ -12,8 +12,8 @@
 /dev/block/platform/msm_sdcc.1/by-name/cache	/cache		ext4	noatime,nosuid,nodev,barrier=1,data=ordered,journal_async_commit			wait,check,formattable
 /dev/block/platform/msm_sdcc.1/by-name/misc	/misc		emmc	defaults							defaults
 /dev/block/platform/msm_sdcc.1/by-name/reserve	/reserve	vfat	defaults							defaults
-/dev/block/platform/msm_sdcc.1/by-name/radio	/firmware/mdm	vfat	ro,shortname=lower,context=u:object_r:firmware_file:s0		wait
-/dev/block/platform/msm_sdcc.1/by-name/adsp	/firmware/q6	vfat	ro,shortname=lower,context=u:object_r:firmware_file:s0		wait
+/dev/block/platform/msm_sdcc.1/by-name/radio	/firmware/mdm	vfat	ro,shortname=lower						wait
+/dev/block/platform/msm_sdcc.1/by-name/adsp	/firmware/q6	vfat	ro,shortname=lower						wait
 
 # External SD card
 /devices/platform/msm_sdcc.3/mmc_host*	auto		auto	defaults	voldmanaged=sdcard1:auto,encryptable=userdata
