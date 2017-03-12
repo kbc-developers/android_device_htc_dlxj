@@ -45,7 +45,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=dlxj user_debug=0
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01800000
-TARGET_KERNEL_CONFIG := cyanogenmod_deluxe_j_defconfig
+TARGET_KERNEL_CONFIG := lineageos_dlxj_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/m7wlj
 TARGET_KERNEL_HAVE_EXFAT := true
 
